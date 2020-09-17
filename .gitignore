@@ -7,17 +7,25 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore bundle
+bundle.js
+bundle.js.map
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
 
+# Ignore webpackified js and node modules
+/app/assets/javascripts/bundle.js
+/app/assets/javascripts/bundle.map.js
+
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
 
-/node_modules
+/node_modules/
 /yarn-error.log
 
 /public/assets
