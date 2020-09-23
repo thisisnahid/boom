@@ -13,16 +13,23 @@
 #  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
-    validates :email, :username, :session_token, presence: true, uniqueness: true
+    validates :email, :session_token, presence: true, uniqueness: true
+    validates :username, uniqueness: true
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
     after_initialize :ensure_session_token
-    attr_reader :passward
+    attr_reader :password
 
-    def self.find_by_credentials(username, password)
-        user = User.find_by(username: username)
-        user && user.is_password?(password) ? user : nil
+    def self.find_by_credentials(element, password)
+        user = User.find_by(email: element)
+         if user && user.is_password?(password) 
+            return nil unless user && user.is_password?(password)
+         else
+            user = User.find_by(username: element)
+            return nil unless user && user.is_password?(password)
+         end
+         return user
     end
 
     def is_password?(password)
@@ -34,7 +41,7 @@ class User < ApplicationRecord
     end
 
     def password=(password)
-        @passward=password
+        @password=password
         self.password_digest = BCrypt::Password.create(password)
     end
 

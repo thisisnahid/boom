@@ -1,0 +1,53 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  animation-name: modal-animation;
+  animation-duration: 400ms;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  width: 53%;
+  height: 580px;
+  color: black;
+  text-align: center;
+}
+
+.login-form {
+  // z-index: -1;
+  color: black;
+}
+
+// .session-form-container {
+//   margin: 16px;
+//   max-width: 500px;
+//   width: 100%;
+//   height: 600px;
+//   display: flex; 
+//   border-radius: 20px;
+//   padding: 16px;  
+//   overflow: hidden; 
+//   background-color: white;
+//   z-index: -1;
+//   color: black;
+// }
+
+@keyframes modal-animation {
+  from {
+    top: -100%;
+    bottom: -100%;
+  }
+  to {
+    top: 50%;
+    bottom: 0%;
+  }
+}

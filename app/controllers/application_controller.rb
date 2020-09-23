@@ -4,12 +4,11 @@ class ApplicationController < ActionController::Base
 
     private
     def current_user
-        return nil unless session[:session_token]
         @current_user ||= User.find_by(session_token: session[:session_token])
     end
 
 
-    def ensure_logged_in!
+    def ensure_logged_in
         render "/api/session" unless logged_in?
     end
 

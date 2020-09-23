@@ -1,0 +1,64 @@
+.navbar {
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    // z-index: -1;
+    text-align: center;
+    width: 100%;
+    border-right: 1px solid #111;
+    box-sizing: border-box;
+    height: 46px;
+    
+}
+
+.h2-boom {
+    color: black;
+    background-color: coral;
+    display: flex;
+    padding: 12px 0;
+    width: 44px;
+    justify-content: center;
+    z-index: -1;
+    position: relative;
+}
+
+.boom-logo-nav {
+    position: relative;
+}
+
+.nav-search {
+    padding: 9px 10px 8px;
+    position: relative;
+    display: block;
+    border-radius: 13px;
+}
+
+
+.logout-nav {
+    display: flex;
+    justify-content: right;
+    /* align-items: flex-end; */
+    height: 50px;
+    border: black solid;
+    border: 0px;
+    z-index: -1;
+}
+
+
+.nav-links {
+    color: #CCCCCC;
+    opacity: 86%;
+    font-size: 14px;
+    padding: 12px 0;
+    width: 104px;
+    justify-content: center;
+    border-right: solid black 1pt;
+}
+
+
+.nav-links:hover {
+    color: whitesmoke;
+    cursor: pointer;
+} 
