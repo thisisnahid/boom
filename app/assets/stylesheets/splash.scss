@@ -1,46 +1,51 @@
-.splash {
-    display: flex;
-    flex-direction: row;
+.splash-nav {
+    display: block;
+    // flex-direction: row;
     justify-content: space-between;
     // z-index: -1;
-    position: fixed;
-    text-align: center;
+    position: relative;
+    align-items: center;
     width: 100%;
     margin-left: 25px;
     margin-right: 25px;
     border-right: 1px solid #111;
     box-sizing: border-box;
-    height: 600px;
+    height: 450px;
     background-image: url(https://a-v2.sndcdn.com/assets/images/hp_image_creator_slide-db400e2f.jpg);
-    border-top: coral 5px solid;
-    
+    border-top: #FF5500 4px solid;
+    font-size: 13px;
+    font-weight: 100;
 }
 
 .boom-logo-splash {
-    color: black;
+    color: #fff;
     display: flex;
     padding: 12px 0;
     width: 70px;
-    justify-content: center;
+    justify-content: space-between;
     z-index: -1;
     position: relative;
-    height: 10px;
+    height: 40px;
     // float: left;
     // flex-direction: row;
 }
 
 .boom-text {
     position: relative;
-    color: whitesmoke;
-    justify-content: center;
-    margin-right: 15px;
+    color: #fff;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-right: 30px;
 }
 
 .right-session-buttons {
     padding: 9px 10px 8px;
-    position: relative;
+    position: absolute;
     display: block;
-    color: whitesmoke;
+    color: #fff;
+    top: 8px;
+    right: 30px;
+    justify-content: space-between;
 }
 
 .right-session-buttons:hover {
@@ -48,15 +53,38 @@
 }
 
 .signin-button {
-    border: 1px solid coral;
-    box-sizing: border-box;
-    color: coral;
+    padding: 2px 15px;
+    border: 1px solid #fff;
+    color: #fff;
     background: transparent;
+    border-radius: 3px;
+    margin-left: 10px;
+    line-height: 26px;
 }
 
 .create-account-button {
-    color: whitesmoke;
-    background: coral;
+    padding: 2px 15px;
+    color: #fff;
+    background: #FF5500;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    line-height: 26px;
+}
+
+.for-creators-button {
+    padding: 2px 15px;
+    color: #fff;
+    background: transparent;
+}
+
+.top-image-text {
+    text-align: center;
+    display: flex;
+    justify-content: last baseline;
+    font-size: 36px;
+    color: #fff;
+    top: 8px;
 }
 
 

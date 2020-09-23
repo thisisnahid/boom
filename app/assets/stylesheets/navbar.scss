@@ -1,64 +1,130 @@
-.navbar {
+.navbar-container {
+    width: 100%;
+    margin: 0 auto;
     background-color: #333;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    clear: both;
+    font-size: 14px;
+    font-weight: 100;
+    z-index: 10;
     position: fixed;
-    // z-index: -1;
-    text-align: center;
-    width: 100%;
-    border-right: 1px solid #111;
-    box-sizing: border-box;
-    height: 46px;
-    
-}
-
-.h2-boom {
-    color: black;
-    background-color: coral;
-    display: flex;
-    padding: 12px 0;
-    width: 44px;
     justify-content: center;
-    z-index: -1;
-    position: relative;
+    font-size: 14px;
 }
 
 .boom-logo-nav {
-    position: relative;
+    float: left;
+    background-color: #FF5500;
+    padding: 12px 0;
+    width: 44px;
+    height: 22px;
+    padding: 10px, 0;
+
+}
+
+nav {
+    // display: flex;
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+nav li {
+    line-height: 34px;
+    color: #e5e5e5;
+    float: left;;
+    margin-left: 30px;
+    // margin-right: 20px;
+    padding: 6px 6px;
+    border-right: 1pt solid black;
+    padding-right: 30px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    
+}
+
+nav a:hover {
+    cursor: pointer;
 }
 
 .nav-search {
-    padding: 9px 10px 8px;
-    position: relative;
-    display: block;
-    border-radius: 13px;
+    background: #e5e5e5;
+    border-radius: 3px;
+    color: #666;
+    text-align: left;
+    // padding: 5px 7px;
 }
 
 
-.logout-nav {
-    display: flex;
-    justify-content: right;
-    /* align-items: flex-end; */
-    height: 50px;
-    border: black solid;
-    border: 0px;
-    z-index: -1;
-}
+// .navbar {
+//     background-color: #333;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     position: fixed;
+//     // z-index: -1;
+//     text-align: center;
+//     width: 100%;
+//     border-right: 1px solid #111;
+//     box-sizing: border-box;
+//     height: 46px;
+    
+// }
+
+// .h2-boom {
+//     color: black;
+//     background-color: coral;
+//     display: flex;
+//     padding: 12px 0;
+//     width: 44px;
+//     justify-content: center;
+//     z-index: -1;
+//     position: relative;
+// }
+
+// .boom-logo-nav {
+//     position: relative;
+// }
+
+// .nav-search {
+//     padding: 9px 10px 8px;
+//     position: relative;
+//     display: block;
+//     border-radius: 13px;
+// }
 
 
-.nav-links {
-    color: #CCCCCC;
-    opacity: 86%;
-    font-size: 14px;
-    padding: 12px 0;
-    width: 104px;
-    justify-content: center;
-    border-right: solid black 1pt;
-}
+// .logout-nav {
+//     display: flex;
+//     justify-content: right;
+//     /* align-items: flex-end; */
+//     height: 50px;
+//     border: black solid;
+//     border: 0px;
+//     z-index: -1;
+// }
 
 
-.nav-links:hover {
-    color: whitesmoke;
-    cursor: pointer;
-} 
+// .nav-links {
+//     color: #CCCCCC;
+//     opacity: 86%;
+//     font-size: 14px;
+//     padding: 12px 0;
+//     width: 104px;
+//     justify-content: center;
+//     border-right: solid black 1pt;
+// }
+
+
+// .nav-links:hover {
+//     color: whitesmoke;
+//     cursor: pointer;
+// } 

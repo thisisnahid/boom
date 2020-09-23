@@ -4,7 +4,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background:#F2F2F2E6;
   z-index: 10;
 }
 
@@ -15,16 +15,129 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: whitesmoke;
-  width: 53%;
-  height: 580px;
+  background-color: #fff;
+  width: 450px;
+  height: 520px;
   color: black;
   text-align: center;
 }
 
+// hr {
+//   width: 10%;
+//   height: 1pt;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   background-color: black;
+//   margin-top: 5px;
+//   margin-bottom: 5px;
+//   display: flex;
+// }
+
 .login-form {
   // z-index: -1;
   color: black;
+  justify-content: center;
+  padding: 30px;
+}
+
+.signup-form {
+  color: black;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.help-link {
+  float: right;
+  margin-bottom: 2px;
+  color: #3388DD;
+  font-size: 12px;
+  display: block;
+}
+
+.privacy-link {
+  margin-bottom: 2px;
+  color: #3388DD;
+}
+
+.signup-footer {
+  padding: 5px 5px;
+  font-size: 12px;
+  color: #999999;
+  text-align: left;
+  float: end;
+  // position: absolute;
+  // bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+.facebook-button {
+  background-color: #3578E5;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 12px;
+  width: 100%;
+  border-radius: 3px;
+  border: #ccc 1pt solid;
+  margin-bottom: 15px;
+}
+
+.google-button {
+  background-color: #FFFFFF;
+  color: #222222;
+  padding: 10px 15px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 12px;
+  width: 100%;
+  border-radius: 3px;
+  border: #ccc 1pt solid;
+  margin-bottom: 15px;
+}
+
+.apple-button {
+  background-color: black;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 12px;
+  width: 100%;
+  border-radius: 3px;
+  border: #ccc 1pt solid;
+  margin-bottom: 15px;
+}
+.continue-button {
+  background-color: #FF5500;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 12px;
+  width: 100%;
+  border-radius: 3px;
+  border: #ccc 1pt solid;
+  margin-bottom: 15px;
+}
+
+.signup-inputs {
+    border-radius: 3px;
+    border: #ccc 1pt solid;
+    color: #ccc;
+    text-align: left;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
 }
 
 // .session-form-container {
