@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => ({
             Signup
          </button>
     ),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    login: user => dispatch(login(user)).then(() => closeModal()) 
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
