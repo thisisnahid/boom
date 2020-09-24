@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
     constructor(props) {
         super(props);
-        // this.handleLogout = this.handleLogout.bind(this);
+        this.handleLogout = this.handleLogout.bind(this);
     }
 
-    // handleLogout(e) {
-        // this.props.logout();
-    // }
+    handleLogout(e) {
+        this.props.logout();
+    }
 
 
     render() {
@@ -29,7 +29,7 @@ class NavBar extends React.Component {
                             <li><a className="nav-links">Try Pro</a></li>
                             <li><a className="nav-links">Upload</a></li >
                             {/* <li><a className="fas fa-bell"><img src="https://fontawesome.com/icons/bell?style=solid" alt=""/></a></li> */}
-                            <li><Link to="" className="nav-links" onClick={() => logout()}>Log Out</Link></li>
+                            <li><Link to="" className="nav-links" onClick={this.handleLogout}>Log Out</Link></li>
                         </ul>
                     </nav>
                 </div>

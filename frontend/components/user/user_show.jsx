@@ -12,11 +12,22 @@ class UserShow extends React.Component {
     
     render() {
         const { user } = this.props;
+        let name;
+        if (user.username) {
+            name = user.username;
+        } else {
+            name = user.email;
+        }
+
         return(
             <div className="user-show-page">
-                <NavBar/>
-                <h3 className="h3-email">{user.email}</h3>
-                <p>this is {user.email}'s show page</p>
+                <NavBar className="nav-bar-user-show" />
+                <div className="user-show-page-container">
+                    <header className="header-background">
+                        <img className="profile-pic" src={user.img_url} alt="profile-pic"/>
+                        <p className="user-name">{name}</p>
+                    </header>
+                </div>
             </div>
         )
     }
