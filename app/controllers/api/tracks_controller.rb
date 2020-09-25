@@ -8,10 +8,11 @@ class TracksController < ApplicationController
 
    def show
     @track = Track.find_by(id: params[:id])
-    if @track
-        render :show
-    else
-        render json: ["Could not locate track"], status 404
+        if @track
+            render :show
+        else
+            render json: ["Could not locate track"], status 404
+        end
     end
 
     def create
