@@ -11,3 +11,4 @@ export const fetchUser = userId => (
         method: "GET"
     })
 );
+ 
