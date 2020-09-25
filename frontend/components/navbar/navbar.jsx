@@ -3,13 +3,13 @@ import { Link, useHistory } from 'react-router-dom';
 
 
 const NavBar= (props) => {
-    const { logout } = props;
+    const { logout, user } = props;
     
     let history = useHistory();
    
     const handleLogout = () => {
-        logout();
-        history.push("/");
+        logout()
+            .then(history.push("/"));
     }
 
 

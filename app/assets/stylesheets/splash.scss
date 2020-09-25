@@ -1,3 +1,8 @@
+.splash-container {
+    justify-content: center;
+    align-items: center;
+}
+
 .splash-nav {
     display: block;
     // flex-direction: row;
@@ -171,6 +176,34 @@
     height: 380px;
     margin: 50px 0 0 50px
     
+}
+
+.footer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    padding: 10px 15px 70px 30px;
+    // margin-left: 10px;
+    font-size: 13px;
+    color: #CCCCCC;
+    border-top: solid 1pt #CCCCCC;
+    width: 80%;
+    li {
+        margin-left: 5px;
+    }
+
+}
+
+.footer-links:hover {
+    cursor: pointer;
 }
 
 
