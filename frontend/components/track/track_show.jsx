@@ -1,24 +1,24 @@
-// import React from 'react';
-// import NavBar from '../navbar/navbar';
+import React from 'react';
+import NavBar from '../navbar/navbar';
 
-// class TrackShow extends React.Component {
+class TrackShow extends React.Component {
 
-//     componentDidMount() {
-//         this.props.fetchTrack(this.props.match.params.trackId)
-//     }
+    componentDidMount() {
+        this.props.fetchTrack(this.props.match.params.trackId)
+    }
 
-//     render() {
-//         const { track } = this.props;
+    render() {
+        const { track } = this.props;
 
-//         return (
-//             <div className="track-show-container">
-//                 <NavBar /> 
-//                 <div className="track-info">
-//                     <h1>{track.title}</h1>
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
+        return (
+            <div className="track-show-container">
+                <NavBar /> 
+                <div className="track-info">
+                    <h1>{track.title}</h1>
+                </div>
+            </div>
+        )
+    }
+}
 
-// export default TrackShow;
+export default TrackShow;

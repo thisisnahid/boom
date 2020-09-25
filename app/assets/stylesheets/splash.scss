@@ -3,6 +3,10 @@
     align-items: center;
 }
 
+.splash {
+    align-items: center;
+}
+
 .splash-nav {
     display: block;
     // flex-direction: row;
@@ -171,11 +175,52 @@
 }
 
 .mobile-container {
-    background-image: url(https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg);
-    width: 65%;
-    height: 380px;
-    margin: 50px 0 0 50px
+    // background-image: url(https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg);
+    width: 90%;
+    height: 300px;
+    // float: left;
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    margin: 60px 15px 20px 160px ;
+    align-self: center;
     
+}
+
+.mobile-img {
+    width: 40%;
+    height: 300px;
+    margin: 50px 0 50px 0; 
+    display: block;
+    float: right;
+}
+
+.text-mobile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+
+.never-stop {
+    font-size: 35px;
+    display: flex;
+    margin-bottom: 60px; 
+    padding-right: 600px;
+    width: 80%;
+    justify-content: left;
+    text-align: left;
+}
+
+.ios {
+    text-align: left;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    margin-bottom: 100px; 
+    padding-right: 100px;
+    width: 51%;
+    // justify-content: left;
 }
 
 .footer {
@@ -199,12 +244,46 @@
     li {
         margin-left: 5px;
     }
-
 }
+
+.find-out-more {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // line-height: 20px;
+    border-radius: 3px;
+    padding: 15px 15px 15px 15px; 
+    font-size: 18px;
+    margin-left: 200px;
+    margin-top: 23px;
+    border: solid 1pt white;
+}
+
+.calling-creators-container {
+    background-color: #111;
+    height: 380px;
+    color: white;
+    justify-content: left;
+    text-align: left;
+}
+
+
+.creators-header {
+    font-size: 24px;
+}
+
+.creators-text {
+    font-size: 18px;
+}
+
+
 
 .footer-links:hover {
     cursor: pointer;
 }
+
 
 
 // .logout-nav {

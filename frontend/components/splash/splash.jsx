@@ -42,17 +42,25 @@ class Splash extends React.Component {
                         <button className="explore-trending-button">Explore trending playlists</button>
                     </div>
                     <div className="mobile-container">
-
+                        <img className="mobile-img" src="https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg" alt=""/>
+                        <div className="text-mobile">
+                            <p className="never-stop">Never stop listening</p>
+                            <p className="ios">Boom is fully available on Web and some features on iOS, Android, Sonos, Chromecast, and Xbox One. </p>
+                        </div>
                     </div>
                     <div className="calling-creators-container">
-
+                        <div className="calling-artist-text">
+                            <p className="creators-header">Calling all creators</p>
+                            <p className="creators-text">Get on Boom to connect with fans, share your sounds, and grow your audience. What are you waiting for?</p>
+                            <button className="find-out-more">Find out more</button>
+                        </div>
                     </div>
                     <div className="ty-join-container"> 
                     </div>
                 </div>
                 <footer className="footer">
                     <ul className="footer-links"> 
-        <li><a href="https://github.com/thisisnahid/boom/">Github - </a></li>
+                        <li><a href="https://github.com/thisisnahid/boom/">Github - </a></li>
                         <li><a href="https://www.linkedin.com/in/nahid-siddiqui-73179ba9/"> LinkedIn - </a></li>
                         <li><a href="https://groomarts.com/assets/images/_listItem/cute-puppy-1.jpg"> Puppy</a></li>
                     </ul>
