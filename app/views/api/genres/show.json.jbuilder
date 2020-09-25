@@ -1,1 +1,1 @@
-json.extract! genre, :id, :genre
+# json.extract! genre, :id, :genre

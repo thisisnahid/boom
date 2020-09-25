@@ -5,7 +5,7 @@ import tracksReducer from './entities_reducers/tracks_reducer';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
-    tracks: tracksReducer
+    // tracks: tracksReducer
 });
 
 export default entitiesReducer;

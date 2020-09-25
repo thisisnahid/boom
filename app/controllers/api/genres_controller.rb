@@ -1,12 +1,12 @@
-class GenresController < ApplicationController
+# class GenresController < ApplicationController
 
-    def show
-        @genre = Genre.find_by(id: params[:id])
-        render :show
-    end
+#     def show
+#         @genre = Genre.find_by(id: params[:id])
+#         render :show
+#     end
 
-    # private
-    # def genre_params
-    #     params.require(:genre).permit(:genre)
-    # end
-end
+#     # private
+#     # def genre_params
+#     #     params.require(:genre).permit(:genre)
+#     # end
+# end
