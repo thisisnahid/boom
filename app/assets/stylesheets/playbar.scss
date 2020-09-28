@@ -1,0 +1,22 @@
+.playbar-container {
+    width: 100%;
+    border-top: solid 1pt rgb(194, 191, 191);
+    background-color: rgb(241, 241, 241);
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    padding: 15px 10% 15px 10%;
+}
+
+.playbar-sub-container {
+}
+
+.playbar-left-buttons {
+    float: left;
+}
+
+.playbar-right-buttons {
+    // display: flex;
+    float: right;
+    padding-right: 20%;
+}

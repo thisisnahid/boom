@@ -1,0 +1,56 @@
+.track-header-container {
+    padding-top: 80px;
+    // background-image: img-url(images/track-show-bg);
+    // background-color: ivory;
+    background-image: linear-gradient(rgb(83, 0, 72), rgb(219, 219, 219));
+    background-size: 1150px 100%;
+    // z-index: -1;
+    display: flex;
+}
+
+.track-artwork {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    float: right;
+    padding: 0 10px 20px 35%;
+}
+
+.track-text-show-container {
+    // width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+// .track-info {
+//     padding: 50px;
+//     font-size: 50px;
+//     float: left;
+// }
+
+.track-artist-show {
+    background-color: rgb(24, 24, 24);
+    color: ghostwhite;
+    font-size: 16px;
+    // width: auto;
+    padding: 4px 4px 4px 4px;
+    text-align: left;
+    margin: 0 68% 10px 0;
+}
+
+.track-title-show {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    width: auto;
+    padding: 4px 4px 4px 4px;
+}
+
+.track-header-play-icon {
+  color: #f50;
+  font-size: 60px;
+  margin: 0 15px 0 60px;
+}

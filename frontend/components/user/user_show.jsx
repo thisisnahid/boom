@@ -19,6 +19,9 @@ class UserShow extends React.Component {
             name = user.email;
         }
 
+        
+
+        //header, info, insights
         return(
             <div className="user-show-page">
                 <NavBar className="nav-bar-user-show" />

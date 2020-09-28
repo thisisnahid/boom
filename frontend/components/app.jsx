@@ -8,18 +8,17 @@ import DiscoverContainer from "./discover/discover_container";
 import SplashContainer from "./splash/splash_container";
 import TrackShowContainer from "./track/track_show_container";
 import Modal from "./modal/modal"
+import Playbar from "./playbar/playbar_container";
 // import NavBar from "./navbar/navbar_container";
 
 const App = () => (
     <div>
         <Modal />
-        {/* <Switch> */}
             <ProtectedRoute exact path="/discover" component={DiscoverContainer} />
             <AuthRoute exact path="/" component={SplashContainer} />
-        {/* </Switch> */}
             <ProtectedRoute path="/users/:userId" component={UserShowContainer} />
-            <Route path="/tracks/:trackId" component={TrackShowContainer} />
-        
+            <ProtectedRoute path="/tracks/:trackId" component={TrackShowContainer} />
+        <Playbar />
     </div>
 );
 

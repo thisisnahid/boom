@@ -1,7 +1,12 @@
 import React from 'react';
 import NavBar from '../navbar/navbar';
+import { FaPlayCircle } from 'react-icons/fa';
 
 class TrackShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = this.props.track
+    }
 
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.trackId)
@@ -9,13 +14,38 @@ class TrackShow extends React.Component {
 
     render() {
         const { track } = this.props;
+        
+        let trackShow;
+        if (track) { 
+
+            let artistName;
+            if (track.artist) {
+                artistName = track.artist
+            } else {
+                artistName = "Unknown"
+            }
+
+            trackShow =  (
+            <div className="track-header-container">
+                <a className="track-header-play-icon" onClick={() => this.props.receiveSelectedTrack(track)}><FaPlayCircle /></a>
+                <div className="track-text-show-container">
+                    <h1 className="track-artist-show">{artistName}</h1>
+                    <h1 className="track-title-show">{track.title} {track.email}</h1>
+                </div>
+                <audio id="track-file" src={track.songUrl} alt={track.title} />
+                <img className="track-artwork" src={track.photoUrl} alt={track.title} />
+            </div>
+        )
+        } else {
+            trackShow = null
+        };
 
         return (
-            <div className="track-show-container">
+            <div>
                 <NavBar /> 
-                <div className="track-info">
-                    <h1>{track.title}</h1>
-                </div>
+                <div className="track-show-container">
+                    {trackShow}
+                 </div>
             </div>
         )
     }

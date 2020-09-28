@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
     window.dispatch = store.dispatch;
     window.currentUser = store.currentUser;
+    window.selectedTrack = store.selectedTrack;
     
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root)

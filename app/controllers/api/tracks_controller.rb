@@ -1,4 +1,4 @@
-class TracksController < ApplicationController
+class Api::TracksController < ApplicationController
    before_action :ensure_logged_in, only: [:edit, :create, :destroy]
    
    def index
@@ -7,11 +7,11 @@ class TracksController < ApplicationController
    end
 
    def show
-    @track = Track.find_by(id: params[:id])
+    @track = Track.find(params[:id])
         if @track
-            render :show
+            render 'api/tracks/show'
         else
-            render json: ["Could not locate track"], status 404
+            render json: ["Could not locate track"], status: 404
         end
     end
 
@@ -22,7 +22,7 @@ class TracksController < ApplicationController
         if @track.save
             render :show
         else
-            render json: @tracks.errors.full_messages, status 400
+            render json: @tracks.errors.full_messages, status: 400
         end
     end
 
@@ -32,7 +32,7 @@ class TracksController < ApplicationController
         if @track && @track.update(track_params)
             render :show
         else
-            render json: @track.errors.full_messages, status 400
+            render json: @track.errors.full_messages, status: 400
         end
     end
 

@@ -28,12 +28,14 @@ class Splash extends React.Component {
                             <br />
                         {/* <img className="img-background" src="https://a-v2.sndcdn.com/assets/images/hp_image_creator_slide-db400e2f.jpg" /> */}
                         </div>
-                        <p className="top-image-text">What's next in music is here on Boom</p>
-                        <p className="top-image-subtext">Upload your first track and begin your journey. Boom gives you space to create, find your fans, and connect with other artists.</p>
-                        <button className="start-uploading-button">Start uploading today</button>
+                        <div className="top-image-text-container">
+                            <p className="top-image-text">What's next in music is here on Boom</p>
+                            <p className="top-image-subtext">Upload your first track and begin your journey. Boom gives you space to create, find your fans, and connect with other artists.</p>
+                            <button className="start-uploading-button">Start uploading today</button>
+                        </div>
                     </div>
                     <div className="splash-search-container">
-                        <input type="text" className="splash-search-input" value="Search for artists, bands, tracks, or podcasts"/>
+                        <input type="text" className="splash-search-input" placeholder="Search for artists, bands, tracks, or podcasts"/>
                         <a className="or"> or </a>
                         <button className="upload-own-button">Upload Your Own</button>
                     </div>

@@ -18,6 +18,36 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
+    belongs_to :genre,
+    class_name: :Genre,
+    foreign_key: :genre_id,
+    primary_key: :id
+
+    has_many :tracks,
+    class_name: :Track,
+    foreign_key: :artist_id,
+    primary_key: :id
+
+    has_many :incoming_follows,
+    class_name: :Follow,
+    foreign_key: :artist_id,
+    primary_key: :id
+
+    has_many :outgoing_follows, 
+    class_name: :Follow,
+    foreign_key: :follower_id,
+    primary_key: :id
+
+    has_many :followers,
+    through: :incoming_follows,
+    source: :follower
+
+    has_many :artists_following,
+    through: :outgoing_follows,
+    source: :artist 
+
+    has_one_attached :photo
+
     after_initialize :ensure_session_token
     attr_reader :password
 
