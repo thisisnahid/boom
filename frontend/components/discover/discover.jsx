@@ -32,7 +32,7 @@ class Discover extends React.Component {
         const { tracks } = this.props
         let tracklist1 = [], t1t1, t1t2, t1t3, t1t4,
             tracklist2 = [], t2t1 ,t2t2, t2t3, t2t4,
-            tracklist3 = [], t3t1, t3t2, t3t3, t3t4, t3t5,
+            tracklist3 = [], t3t1, t3t2, t3t3, t3t4,
             tracklist4 = [], t4t1, t4t2, t4t3, t4t4, t4t5,
             playlist1, playlist2, playlist3, playlist4;
     
@@ -44,10 +44,10 @@ class Discover extends React.Component {
         }
 
         if (tracksArray) {
-            tracklist1.push(tracksArray[4], tracksArray[9], tracksArray[12], tracksArray[16]);
+            tracklist1.push(tracksArray[4], tracksArray[10], tracksArray[13], tracksArray[16]);
             tracklist2.push(tracksArray[5], tracksArray[6], tracksArray[7], tracksArray[8]); 
-            tracklist3.push(tracksArray[11], tracksArray[1], tracksArray[14], tracksArray[15], tracksArray[3]); 
-            tracklist4.push(tracksArray[2], tracksArray[3], tracksArray[10], tracksArray[13], tracksArray[0]);  
+            tracklist3.push(tracksArray[2], tracksArray[11], tracksArray[14], tracksArray[9]); 
+            tracklist4.push(tracksArray[3], tracksArray[12], tracksArray[0], tracksArray[1], tracksArray[15]);  
         }; 
 
         if (tracklist1, tracklist2, tracklist3, tracklist4) {
@@ -63,7 +63,6 @@ class Discover extends React.Component {
             t3t2 = tracklist3[1];
             t3t3 = tracklist3[2];
             t3t4 = tracklist3[3];
-            t3t5 = tracklist4[4];
             t4t1 = tracklist4[0];
             t4t2 = tracklist4[1];
             t4t3 = tracklist4[2];
@@ -72,13 +71,13 @@ class Discover extends React.Component {
         } else {
             t1t1, t1t2, t1t3, t1t4,
             t2t1, t2t2, t2t3, t2t4,
-            t3t1, t3t2, t3t3, t3t4, t3t5,
+            t3t1, t3t2, t3t3, t3t4,
             t4t1, t4t2, t4t3, t4t4, t4t5 = null
         };
 
         if (t1t1, t1t2, t1t3, t1t4,
             t2t1, t2t2, t2t3, t2t4,
-            t3t1, t3t2, t3t3, t3t4, t3t5,
+            t3t1, t3t2, t3t3, t3t4,
             t4t1, t4t2, t4t3, t4t4, t4t5) {
             playlist1 = (
                 <div className="playlist1-container">
@@ -156,7 +155,7 @@ class Discover extends React.Component {
                 <div className="playlist3-container">
                     <div className="playlist-titles">
                         <h1 className="t1-name">Alternative Route</h1>
-                        <h2 className="t1-details">Up {'&'} Coming Alternative Songs </h2>
+                        <h2 className="t1-details">Up {'&'} coming Alternative songs </h2>
                     </div>
                     <br />
                     <ul className="playlist1-tracks">
@@ -185,20 +184,14 @@ class Discover extends React.Component {
                             <Link to="" className="t-artist">{t3t4.artist}</Link>
                             {/* <audio src={t3t4.songUrl} controls /> */}
                         </li>
-                        <li>
-                            <img className="t-img" src={t3t5.photoUrl} alt="t3t5-img" />
-                            <Link to={`/tracks/${t3t5.id}`} className="t-title">{t3t5.title}</Link><br />
-                            <Link to="" className="t-artist">{t3t5.artist}</Link>
-                            {/* <audio src={t3t5.songUrl} controls /> */}
-                        </li>
                     </ul>
                 </div>
             );
             playlist4 = (
                 <div className="playlist3-container">
                     <div className="playlist-titles">
-                        <h1 className="t1-name">Alternative Route</h1>
-                        <h2 className="t1-details">Up {'&'} Coming Alternative Songs </h2>
+                        <h1 className="t1-name">Pop Hits</h1>
+                        <h2 className="t1-details">Check out Boom's most played in Pop</h2>
                     </div>
                     <br />
                     <ul className="playlist1-tracks">

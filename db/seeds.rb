@@ -196,7 +196,7 @@ t14.photo.attach(io: t14_photo, filename: 't14_photo.jpg')
 t14_song = open("https://boom-music-dev.s3.amazonaws.com/track-mp3/Ashe+-+Moral+of+the+Story.mp3")
 t14.song.attach(io: t14_song, filename: 't14_song.mp3')
 
-t15 = Track.create(title: "Down", artist_id: u13.id, genre_id: g2.id)
+t15 = Track.create(title: "Down", artist_id: u14.id, genre_id: g2.id)
 t15_photo = open("https://boom-music-dev.s3.amazonaws.com/track-art/track-emily-king.jpg")
 t15.photo.attach(io: t15_photo, filename: 't15_photo.jpg')
 t15_song = open("https://boom-music-dev.s3.amazonaws.com/track-mp3/Emily+King+-+Down.mp3")
