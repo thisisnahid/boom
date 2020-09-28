@@ -1,5 +1,5 @@
 class Api::FollowsController < ApplicationController 
-    before_actin :ensure_logged_in
+    before_action :ensure_logged_in
 
     def create
         @user = current_user
