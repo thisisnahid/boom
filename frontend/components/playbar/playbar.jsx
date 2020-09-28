@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     IoMdSkipBackward, IoMdPlay, IoMdPause, IoMdSkipForward, 
-    IoMdVolumeHigh, GoHeart, MdPlaylistPlay
-} from 'react-icons/io';
+    IoMdVolumeHigh} from 'react-icons/io';
 
 class Playbar extends React.Component {
     constructor(props) {
