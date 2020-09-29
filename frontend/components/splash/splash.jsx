@@ -176,6 +176,13 @@ class Splash extends React.Component {
                         </div>
                     </div>
                     <div className="ty-join-container"> 
+                        <h1>Thanks for listening. Now join in.</h1>
+                        <h2>Save tracks, follow artists and build playlists. All for free.</h2>
+                        <button className="ty-signup-button" onClick={() => openModal("signup")}>Create Account</button>
+                        <div className="ty-login-container">
+                            <a>Already have an account?</a>
+                            <button className="ty-login-button" onClick={() => openModal("login")}>Sign In</button>
+                        </div>
                     </div>
                     <footer className="footer">
                         <ul className="footer-links"> 

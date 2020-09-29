@@ -122,7 +122,7 @@
     opacity: 90%;
     display: block;
     padding: 0 185px 0 185px;
-    width: 860px;
+    width: 500px;
 }
 
 
@@ -194,14 +194,11 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-
     }
      li {
          padding: 10px;
      }
 }
-
-
 
 .e-img {
     height: 180px;
@@ -226,47 +223,42 @@
     padding: 14px 15px 14px 15px; 
     font-size: 18px;
     margin-top: 30px;
+    margin-bottom: 55px;
     text-align: center;
     width: 260px;
 }
 
 .mobile-container {
-    // background-image: url(https://a-v2.sndcdn.com/assets/images/never_stop_listening@1x-9c5264ff.jpg);
-    width: 90%;
-    height: 300px;
-    // float: left;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    height: 390px;
+    padding-top: 70px;
     display: flex;
     justify-content: row;
     align-items: center;
-    margin: 60px 0px 20px 0px ;
-    align-self: center;
+    display: flex;
     
 }
 
 .mobile-img {
-    width: 55%;
-    height: 320px;
     margin: 50px 0 50px 0; 
-    display: block;
+    // display: block;
     float: right;
+    bottom: 0;
 }
 
 .text-mobile {
     display: flex;
     flex-direction: column;
-    // margin-left: 40px;
-    // margin-top: 60px;
-    width: auto;
+    padding: 0 0 20px 65px;
 }
 
 .never-stop {
     font-size: 35px;
     display: flex;
-    margin-bottom: 60px; 
-    padding-right: 600px;
-    width: 80%;
     justify-content: left;
     text-align: left;
+    padding-bottom: 40px;
 }
 
 .ios {
@@ -276,46 +268,6 @@
     display: flex;
     margin-bottom: 100px; 
     padding-right: 100px;
-    width: 51%;
-    // justify-content: left;
-}
-
-.footer {
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: row;
-    // justify-content: space-between;
-    padding: 10px 15px 70px 30px;
-    // margin-left: 10px;
-    font-size: 13px;
-    color: #CCCCCC;
-    border-top: solid 1pt #CCCCCC;
-    width: 80%;
-    li {
-        margin-left: 5px;
-    }
-}
-
-.find-out-more {
-    background-color: transparent;
-    color: white;
-    display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // line-height: 20px;
-    border-radius: 3px;
-    padding: 15px 15px 15px 15px; 
-    font-size: 18px;
-    margin-left: 200px;
-    margin-top: 23px;
-    border: solid 1pt white;
 }
 
 .calling-creators-container {
@@ -324,25 +276,114 @@
     color: white;
     justify-content: left;
     text-align: left;
-    display: block;
+    display: flex;
     background-size: 1119px 320px;
     width: 100%;
     height: 320px;
     
 }
 
+.calling-artist-text {
+    padding: 55px 0 0 60px;
+    width: 500px;
+    float: left;
+}
 
 .creators-header {
-    font-size: 24px;
+    padding-bottom: 17px;
+    font-size: 34px;
+    color: rgba(255, 255, 255, 0.856);
 }
 
 .creators-text {
+    font-size: 24px;
+    color: rgba(240, 240, 240, 0.884);
+}
+
+.find-out-more {
+    background-color: transparent;
+    color: white;
+    display: flex;
+    border-radius: 3px;
+    padding: 15px 15px 15px 15px; 
     font-size: 18px;
+    margin-top: 23px;
+    border: solid 1pt white;
+}
+
+.ty-join-container {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 34px;
+        padding-bottom: 20px;
+    }
+    h2 {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+    .ty-signup-button {
+        background-color: #FF5500;
+        color: white;
+        border-radius: 3px;
+        padding: 15px 15px 15px 15px; 
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 150px;
+    }
+    .ty-login-container {
+        display: flex;
+        flex-direction: row;
+        a {
+            font-size: 12px;
+            padding-top: 12px;
+        }
+        button {
+            background-color: white;
+            border-radius: 3px;
+            padding: 12px 12px 12px 12px; 
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 80px;
+            border: 1pt solid rgb(218, 218, 218);
+            font-size: 16px;
+            margin-left: 15px;
+        }
+    }
 }
 
 
+.footer {
+    // float: left;
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0px 70px 0px;
+    margin: 0 40px 0 40px;
+    font-size: 13px;
+    color: rgb(218, 218, 218);
+    border-top: solid 1pt rgb(218, 217, 217);
+    li {
+        margin-left: 5px;
+    }
+}
 
 .footer-links:hover {
     cursor: pointer;
 }
+
+
+
+
+
 
