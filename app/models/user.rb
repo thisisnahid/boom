@@ -18,10 +18,10 @@ class User < ApplicationRecord
     validates :password_digest, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
 
-    belongs_to :genre,
-    class_name: :Genre,
-    foreign_key: :genre_id,
-    primary_key: :id
+    # belongs_to :genre,
+    # class_name: :Genre,
+    # foreign_key: :genre_id,
+    # primary_key: :id
 
     has_many :tracks,
     class_name: :Track,

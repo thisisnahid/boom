@@ -6,9 +6,9 @@ class Genre < ApplicationRecord
     foreign_key: :genre_id,
     primary_key: :id
 
-    has_many :artists,
-    class_name: :Users,
-    foreign_key: :genre_id,
-    primary_key: :id
+    # has_many :artists,
+    # class_name: :Users,
+    # foreign_key: :genre_id,
+    # primary_key: :id
     
 end

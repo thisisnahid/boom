@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user)
+        this.props.processForm(user).then(closeModal())
     }
 
     update(field) {
@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
         e.preventDefault();
         const demo = Object.assign({email: "iambeyalways@queenb.com", password: "beehive911", username: "Beyoncé" }); 
         this.props.login(demo)
-            .then(this.props.closeModal);
+            .then(this.props.closeModal());
     }
 
     render() {
@@ -37,10 +37,6 @@ class SessionForm extends React.Component {
         if (this.props.errors.session) {
             errorsArray = this.props.errors.session.map(error => <p> {error} </p>)
         };
-
-        // let emailPlaceholder = document.getElementById("email");
-        // emailPlaceholder.placeholder = "Your email address";
-        
 
         const signupModal = (
             <div className="signup-form">

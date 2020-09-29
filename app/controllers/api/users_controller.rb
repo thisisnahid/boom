@@ -2,6 +2,11 @@ class Api::UsersController < ApplicationController
 
     before_action :ensure_logged_in, only: [:edit]
 
+     def index
+        @users = User.all
+        render :index
+    end
+
     def show
         @user = User.find(params[:id])
         render 'api/users/show'

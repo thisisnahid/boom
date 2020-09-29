@@ -6,7 +6,8 @@ import { fetchUsers } from '../../actions/user_actions';
 const mapStateToProps = (state) => ({
     // tracks: Object.values(state.entities.tracks),
     tracks: state.entities.tracks,
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    users: Object.values(state.entities.users)
 });
 
 const mapDispatchToProps = (dispatch) => ({

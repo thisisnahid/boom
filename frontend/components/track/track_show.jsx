@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../navbar/navbar';
+import NavBar from '../navbar/navbar_container';
 import { FaPlayCircle } from 'react-icons/fa';
 
 class TrackShow extends React.Component {
@@ -44,7 +44,9 @@ class TrackShow extends React.Component {
             <div>
                 <NavBar /> 
                 <div className="track-show-container">
-                    {trackShow}
+                    <div className="track-show-subcontainer">
+                        {trackShow}
+                    </div>
                  </div>
             </div>
         )

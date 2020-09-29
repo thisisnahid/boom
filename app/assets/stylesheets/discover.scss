@@ -1,5 +1,5 @@
 .discover-container {
-    background-color: rgb(241, 241, 241);;
+    background-color: rgb(241, 241, 241);
     height: 100%;
     background-size: cover;
     align-items: center;
@@ -15,13 +15,20 @@
     // align-self: center;
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .playlists-container {
     margin: 0 40px 0 40px;
-    align-items: center;
+    align-items: left;
     display: flex;
     flex-direction: row;
+    float: left;
+    // width: 900px;
+    overflow: hidden;
+    height: 1650px;
+}
+ul {
+    width: 2800px;
 }
 
 .playlist-titles {
@@ -62,10 +69,164 @@
     font-size: 13px;
     color: #333;
     overflow: hidden;
-    
 }
 
 .t-artist {
     font-size: 12px;
     color: #999;
+}
+
+.discover-sidebar-container {
+    float: right;
+    display: flex;
+    border-left: solid rgb(241, 241, 241) 1pt;
+    height: 1650px;
+    width: 100%;
+}
+
+.discover-sidebar-greeting {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 300px;
+    padding: 60px 0 15px 20px;
+}
+
+.h1-d-sidebar {
+
+}
+
+.h2-d-sidebar {
+    line-height: 65px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(49, 49, 49);
+}
+
+.h3-d-sidebar {
+    font-size: 13px;
+    line-height: 0;
+    color: #999;
+    font-weight: lighter;
+}
+
+.sidebar-main {
+    width: 100%;
+}
+
+.sidebar-2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.insights-button {
+    background-color:white;
+    color: #FF5500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    border: 1pt solid #FF5500;
+    padding: 10px 90px 10px 90px; 
+    font-size: 15px;
+}
+
+.sidebar-follow {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.follow-ul {
+    width: 100%;
+    padding: 30px 5px 10px 20px;
+}
+
+.artist-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.right-img-txt {
+    display: flex;
+    float: right;
+}
+
+.follow-i-sb {
+    padding: 0 5px 0 7px;
+}
+
+.who-to-follow {
+    color: #999;
+    font-size: 13px;
+    border-bottom: 1pt solid rgb(241, 241, 241);
+    padding-bottom: 7px;
+    margin-right: 70px;
+}
+
+.who-to-follow-a {
+    padding: 30px 0 0 20px;
+    display: flex;
+    flex-direction: row;
+    line-height: 18px;
+}
+
+.a-name {
+    color: rgb(49, 49, 49);
+    font-size: 12px;
+    padding: 10px 0 0 10px;
+
+}
+
+.right-img-txt {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    height: 50px;
+}
+
+.sb-follow-icons {
+    display: flex;
+    flex-direction: row;
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+div.sb-stream-img {
+     transform: rotate(90deg);
+     margin-right: 5px;
+     margin-left: 12px;
+}
+
+.sb-footer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sb-footer-links {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 15px 70px 30px;
+    font-size: 13px;
+    color: #CCCCCC;
+    border-top: solid 1pt rgb(241, 241, 241);
+    width: 80%;
+    margin-left: 20px;
+    padding: 0 5px 0 7px;
+   li {
+       padding-top: 10px;
+        margin-left: 5px;
+   }
+}
+
+.sb-footer-links:hover {
+    cursor: pointer;
 }
