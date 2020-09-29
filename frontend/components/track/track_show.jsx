@@ -27,10 +27,12 @@ class TrackShow extends React.Component {
 
             trackShow =  (
             <div className="track-header-container">
-                <a className="track-header-play-icon" onClick={() => this.props.receiveSelectedTrack(track)}><FaPlayCircle /></a>
-                <div className="track-text-show-container">
-                    <h1 className="track-artist-show">{artistName}</h1>
-                    <h1 className="track-title-show">{track.title} {track.email}</h1>
+                <div className="top-left-ts">
+                    <a className="track-header-play-icon" onClick={() => this.props.receiveSelectedTrack(track)}><FaPlayCircle /></a>
+                    <div className="track-text-show-container">
+                        <h1 className="track-artist-show">{artistName}</h1>
+                        <h1 className="track-title-show">{track.title} {track.email}</h1>
+                    </div>
                 </div>
                 <audio id="track-file" src={track.songUrl} alt={track.title} />
                 <img className="track-artwork" src={track.photoUrl} alt={track.title} />

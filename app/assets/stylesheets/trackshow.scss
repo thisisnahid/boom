@@ -1,5 +1,5 @@
 .track-show-container {
-    background-color: rgb(241, 241, 241);;
+    background-color: rgb(241, 241, 241);
     height: 100%;
     background-size: cover;
     align-items: center;
@@ -9,10 +9,9 @@
 
 .track-show-subcontainer {
     background-color: white;
-    width: 1250px;
+    width: 90%;
     align-items: center;
-    margin: 30px 120px 0 120px;
-    // align-self: center;
+    margin: 0 50px 0 50px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -20,22 +19,28 @@
 }
 
 .track-header-container {
-    padding-top: 80px;
-    // background-image: img-url(images/track-show-bg);
-    // background-color: ivory;
-    background-image: linear-gradient(rgb(83, 0, 72), rgb(219, 219, 219));
-    // background-size: 1150px 100%;
-    // z-index: -1;
-    width: 80%;
+    padding-top: 60px;
+    background-image: linear-gradient(rgb(148, 108, 82), rgb(36, 36, 36));
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .track-artwork {
-    width: 340px;
-    height: 340px;
+    width: 370px;
+    height: 370px;
     display: flex;
     float: right;
-    padding: 0 10px 20px 35%;
+    padding: 0 0 20px 43%;
+}
+
+.top-left-ts {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 26%;
+    float: left;
+    justify-content: start;
 }
 
 .track-text-show-container {
@@ -44,12 +49,6 @@
     flex-direction: column;
     justify-content: left;
 }
-
-// .track-info {
-//     padding: 50px;
-//     font-size: 50px;
-//     float: left;
-// }
 
 .track-artist-show {
     background-color: rgb(24, 24, 24);
@@ -74,5 +73,5 @@
 .track-header-play-icon {
   color: #f50;
   font-size: 60px;
-  margin: 0 15px 0 60px;
+  margin: 0 15px 0 30px;
 }
