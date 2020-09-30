@@ -5,7 +5,8 @@ import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.entities.users[state.session.id],
-    user: state.entities.users[ownProps.match.params.userId]
+    user: state.entities.users[ownProps.match.params.userId],
+    tracks: Object.values(state.entities.tracks)
 });
 
 const mapDispatchToProps = (dispatch) => ({

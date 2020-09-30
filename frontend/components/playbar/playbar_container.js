@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { receiveSelectedTrack, play, pause, resume } from "../../actions/playbar_actions";
+import { receiveSelectedTrack } from "../../actions/playbar_actions";
 import Playbar from "./playbar";
 
 const mapStateToProps = (state) => {
@@ -10,10 +10,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    receiveSelectedTrack: (selectedTrack) => dispatch(receiveSelectedTrack(selectedTrack)),
-    // play: () => dispatch(play()),
-    // pause: () => dispatch(pause()),
-    // resume: () => dispatch(resume())
+    receiveSelectedTrack: (selectedTrack) => dispatch(receiveSelectedTrack(selectedTrack))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Playbar);

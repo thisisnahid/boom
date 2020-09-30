@@ -8,7 +8,7 @@ class Discover extends React.Component {
         super(props);
         // this.state = this.props.tracks;
     }
-
+    
     componentDidMount() {
         this.props.fetchAllTracks();
         this.props.fetchUsers();
@@ -89,7 +89,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t1t1.id}`} className="t-title">{t1t1.title}</Link><br />
-                            <Link to={`/users/${t1t1.artist.id}`} className="t-artist">{t1t1.artist}</Link>
+                            <Link to={`/users/${t1t1.artist_id}`} className="t-artist">{t1t1.artist}</Link>
                         </li>
                         <li>
                             <div className="track-play-button-container">

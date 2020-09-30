@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     IoMdSkipBackward, IoMdPlay, IoMdPause, IoMdSkipForward, 
-    IoMdVolumeHigh, IoMdVolumeLow, IoMdVolumeOff} from 'react-icons/io';
+    IoMdVolumeHigh, IoMdVolumeLow, IoMdVolumeOff, IoMdHeart, IoMdMenu } from 'react-icons/io';
 
 class Playbar extends React.Component {
     constructor(props) {
@@ -21,11 +21,13 @@ class Playbar extends React.Component {
         this.formatElapsedTime = this.formatElapsedTime.bind(this);
         this.playbarUpdate = this.playbarUpdate.bind(this);
         this.playbarTime = this.playbarTime.bind(this);
+        this.handlePreviousSong = this.handlePreviousSong.bind(this);
+        this.handleNextSong = this.handleNextSong.bind(this);
     }
     
-    // componentWillUnmount() {
-    //     clearInterval(this.timeInterval);
-    // }
+    componentWillUnmount() {
+        clearInterval(this.timeInterval);
+    }
     
     componentDidUpdate(prevProps) {
         if (prevProps.songPlaying !== this.props.songPlaying) {
@@ -61,6 +63,22 @@ class Playbar extends React.Component {
         }
     }
 
+    handlePreviousSong() {
+        const { tracks, selectedTrack, receiveSelectedTrack } = this.props;
+        let i = tracks.indexOf(selectedTrack);
+        let prevSongIdx;
+        if (i == 0) { 
+            prevSongIdx = tracks.length - 1;
+        } else { 
+            prevSongIdx = i - 1;
+        }
+        if (this.audioTag.current.currentTime >= 7) {
+            this.audioTag.current.currentTime = 0;
+        } else {
+            receiveSelectedTrack(tracks[prevSongIdx]);
+        }
+    }
+
     togglePlay() {
         // debugger
         // console.log(this.audioTag.current.currentTime)
@@ -71,6 +89,18 @@ class Playbar extends React.Component {
         }
         this.setState({ songPlaying: !this.state.songPlaying })
     }   
+
+    handleNextSong() {
+        const { selectedTrack, receiveSelectedTrack, tracks, } = this.props;
+        let nextIdx;
+        let i = tracks.indexOf(selectedTrack);
+        if (i == tracks.length - 1) {
+            nextIdx = 0;
+        } else {
+            nextIdx = (i + 1)
+        }
+        receiveSelectedTrack(tracks[nextIdx]);
+    }
 
 
     playbarUpdate() {
@@ -113,7 +143,9 @@ class Playbar extends React.Component {
     render() {
         const { selectedTrack } = this.props;
         const trackTitle = this.props.selectedTrack ? selectedTrack.title : null;
-        let playButton, volumeButton, volumeBar, duration;
+        const trackImg = this.props.selectedTrack ? selectedTrack.photoUrl : null;
+        const trackArtist = this.props.selectedTrack ? selectedTrack.artist : null;
+        let playButton, volumeButton, duration;
         
         if (this.state.songPlaying) {
             playButton = (
@@ -142,13 +174,13 @@ class Playbar extends React.Component {
         }
 
         return (
-            <div className={`playbar-container ${selectedTrack ? "revealed" : "hidden"}`}>
+            <div className="playbar-container">
                 <div className="playbar-sub-container">
                     <div className="playbar-left-buttons">
                         <audio id="track-file" ref={this.audioTag} src={selectedTrack.songUrl} alt={selectedTrack.title} />
-                        <IoMdSkipBackward />
+                        <button className="prev-button" onClick={this.handlePreviousSong}><IoMdSkipBackward /></button>
                         {playButton}
-                        <IoMdSkipForward />
+                        <button className="next-button" onClick={this.handleNextSong}><IoMdSkipForward /></button>
                     </div>
 
                     <div className="progress-bar-container">
@@ -174,6 +206,15 @@ class Playbar extends React.Component {
                             </div>
                         </div>    
                     </div>
+                    <div className="track-info-container">
+                        <img className="playbar-track-pic" src={trackImg} alt="playbar-track-pic" />
+                        <div className="playbar-track-info">    
+                            <h2>{trackArtist}</h2>
+                            <h1>{trackTitle}</h1>
+                        </div>
+                    </div>
+                    <button className="heart-button">< IoMdHeart /></button>
+                    <button className="pl-button"><IoMdMenu /></button>
                 </div>
             </div>
         )
