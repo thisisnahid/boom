@@ -2,7 +2,8 @@ import { RECEIVE_SELECTED_TRACK, PLAY, PAUSE, RESUME} from '../../actions/playba
 
 const defaultState = {
     selectedTrack: null,
-    playState: false
+    playState: false, 
+    songPlaying: false
 }
 
 const playbarReducer = (state = defaultState, action) => {
@@ -12,6 +13,7 @@ const playbarReducer = (state = defaultState, action) => {
         case RECEIVE_SELECTED_TRACK:
             nextState.selectedTrack = action.track;
             nextState.playState = true;
+            nextState.songPlaying = true;
             return nextState;
         case PLAY:
             if (state.playState) {

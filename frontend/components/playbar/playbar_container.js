@@ -5,8 +5,7 @@ import Playbar from "./playbar";
 const mapStateToProps = (state) => {
     return {
         tracks: Object.values(state.entities.tracks),
-        // playState: state.ui.playbar.playState,
-        selectedTrack: state.ui.playbar.selectedTrack || (Object.values(state.entities.tracks))[1]
+        selectedTrack: state.ui.playbar.selectedTrack
     }
 };
 

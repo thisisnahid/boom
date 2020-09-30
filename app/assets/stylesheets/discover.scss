@@ -47,6 +47,7 @@ ul {
  margin-right: 20px;
  text-overflow: ellipsis;
  overflow: hidden;
+ width: 180px;
  
 }
 .t1-name {
@@ -63,6 +64,40 @@ ul {
 .t-img {
     height: 180px;
     width: 180px;
+}
+
+.track-play-button-container {
+    position: relative;
+}
+
+.play-circle-container-track{
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-circle-container-track a {
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.track-play-button-container:hover 
+.track-play-button a:hover {
+  color: #FF5500;
+}
+
+.track-play-button-container:hover 
+.play-circle-container-track {
+  background: transparent;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
 }
 
 .t-title {

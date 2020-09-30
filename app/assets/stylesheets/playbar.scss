@@ -5,14 +5,18 @@
     position: fixed;
     bottom: 0;
     z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .playbar-sub-container {
     padding: 15px 10% 15px 10%;
-}
-
-.playbar-sub-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 1000px;
+    justify-content: center;
+    width: 100%;
 }
 
 .playbar-left-buttons {
@@ -21,8 +25,158 @@
     flex-direction: row;
 }
 
-.playbar-right-buttons {
+.volume-button {
     float: right;
-    // display: flex;
-    // flex-direction: row;
+    display: flex;
+    width: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
 }
+
+.volumebar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+// input[type="range"].volumebar-container {
+//    position: absolute;
+//    top: 40%;
+//    transform: rotate(270deg);
+// }
+
+// .volumebar-container-hidden {
+//   display: none;
+// }
+.volumebar-container-revealed {
+  display: flex;
+  transform: rotate(180);
+}
+
+div.progress-bar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    font-size: 11px;
+    padding: 0 10px 0 10px;
+    .progress-line {
+        margin: 0 25px 0 25px;
+        width: 700px;
+        border-top: solid 1pt #999;
+    }
+    .start-time {
+      color: #FF5500;
+      padding-top: 10px;
+      margin-right: 8px;;
+    }
+    .end-time {
+      color: #333;
+      padding-top: 10px;
+      margin-left: 8px;
+    }
+}
+
+input.progress-bar-input {
+  width: 500px;
+  height: 1pt;
+}
+
+.progress-bar-input::-webkit-slider-thumb {
+  visibility: hidden;
+}
+
+.progress-bar-input::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #FF5500;
+  margin-top: -1px;
+}
+
+// // sourced from http://danielstern.ca/range.css/#/
+// input[type=range] {
+//   width: 100%;
+//   margin: 4.2px 0;
+//   background-color: transparent;
+//   -webkit-appearance: none;
+// }
+// input[type=range]:focus {
+//   outline: none;
+// }
+// input[type=range]::-webkit-slider-runnable-track {
+//   background: #ff5500;
+//   border: 0;
+//   border-radius: 4.4px;
+//   width: 100%;
+//   height: 2.6px;
+//   cursor: pointer;
+// }
+// input[type=range]::-webkit-slider-thumb {
+//   margin-top: -4.2px;
+//   width: 12px;
+//   height: 11px;
+//   background: #ff5500;
+//   border: 0.1px solid #000000;
+//   border-radius: 50px;
+//   cursor: pointer;
+//   -webkit-appearance: none;
+// }
+// input[type=range]:focus::-webkit-slider-runnable-track {
+//   background: #ff661a;
+// }
+// input[type=range]::-moz-range-track {
+//   background: #ff5500;
+//   border: 0;
+//   border-radius: 4.4px;
+//   width: 100%;
+//   height: 2.6px;
+//   cursor: pointer;
+// }
+// input[type=range]::-moz-range-thumb {
+//   width: 12px;
+//   height: 11px;
+//   background: #ff5500;
+//   border: 0.1px solid #000000;
+//   border-radius: 50px;
+//   cursor: pointer;
+// }
+// input[type=range]::-ms-track {
+//   background: transparent;
+//   border-color: transparent;
+//   border-width: 5.2px 0;
+//   color: transparent;
+//   width: 100%;
+//   height: 2.6px;
+//   cursor: pointer;
+// }
+// input[type=range]::-ms-fill-lower {
+//   background: #e64d00;
+//   border: 0;
+//   border-radius: 8.8px;
+// }
+// input[type=range]::-ms-fill-upper {
+//   background: #ff5500;
+//   border: 0;
+//   border-radius: 8.8px;
+// }
+// input[type=range]::-ms-thumb {
+//   width: 12px;
+//   height: 11px;
+//   background: #ff5500;
+//   border: 0.1px solid #000000;
+//   border-radius: 50px;
+//   cursor: pointer;
+//   margin-top: 0px;
+//   /*Needed to keep the Edge thumb centred*/
+// }
+// input[type=range]:focus::-ms-fill-lower {
+//   background: #ff5500;
+// }
+// input[type=range]:focus::-ms-fill-upper {
+//   background: #ff661a;
+// }

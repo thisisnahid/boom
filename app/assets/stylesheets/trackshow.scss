@@ -9,10 +9,10 @@
 
 .track-show-subcontainer {
     background-color: white;
-    width: 90%;
+    width: 70%;
     align-items: center;
     margin: 0 50px 0 50px;
-    height: 100%;
+    height: 1250px;
     display: flex;
     flex-direction: column;
     
@@ -32,13 +32,14 @@
     height: 370px;
     display: flex;
     float: right;
-    padding: 0 0 20px 43%;
+    margin: 0 0 20px 40%;
 }
 
 .top-left-ts {
     display: flex;
     flex-direction: row;
-    margin-bottom: 26%;
+    width: 310px;
+    margin-bottom: 260px;
     float: left;
     justify-content: start;
 }
@@ -50,14 +51,15 @@
     justify-content: left;
 }
 
-.track-artist-show {
+h1.track-artist-show {
     background-color: rgb(24, 24, 24);
     color: ghostwhite;
     font-size: 16px;
-    // width: auto;
+    width: auto;
+    display: block;
     padding: 4px 4px 4px 4px;
     text-align: left;
-    margin: 0 68% 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .track-title-show {
@@ -74,4 +76,167 @@
   color: #f50;
   font-size: 60px;
   margin: 0 15px 0 30px;
+}
+
+.under-ts-header {
+    // width: 100%;
+    padding: 5px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1pt solid #e2e2e2;
+    margin: 10px 7px 0px 7px;
+    line-height: 0px;
+    font-size: 12px;
+    letter-spacing: 1pt;
+    .left-h-ts {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        color: rgb(53, 53, 53);
+        li {
+            border: rgb(219, 219, 219) 1pt solid;
+            margin-bottom: 10px;
+            padding: 5px 8px 5px 8px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+    }
+    ul.right-h-ts {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        color: rgb(184, 184, 184);
+        li {
+            float: right;
+            margin: 0 5px 15px 5px;
+        }
+    }
+}
+
+.main-ts-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.left-artist-bar-container {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    padding: 25px 35px 15px 35px;
+    float: left;
+    h1 {
+        padding: 10px 0 10px 10px;
+        font-size: 14px;
+    }
+}
+
+.artist-img-container {
+    overflow: hidden;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+}
+
+.artist-profile-img {
+     width: 100%;
+     height: 100%;
+}
+
+.mid-track-bar-container {
+    width: 100%;
+}
+
+.main-ts {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ts-main-right-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    border-left: #e2e2e2 solid 1pt;
+    padding: 0px 40px 0px 40px;
+}
+
+.artist-info {
+    padding-top: 20px;
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+}
+
+.ts-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+}
+
+.ad-container {
+    padding: 15px 15px 65px 15px;
+    margin: 20px 0 20px 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1pt solid #e2e2e2;
+    background-color: rgb(241, 241, 241);
+}
+
+.main-body-ts {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-top: 10px 55px 0 55px;
+    // margin:  0 55px 0 55px;
+    // align-items: center;
+}
+
+div.ad-text {
+    color: rgb(53, 53, 53);
+    padding-top: 300px;
+    font-size: 12px;
+}
+
+.gif-ad {
+    display: flex;
+}
+
+.ts-footer {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ts-footer-links {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 30px 70px 30px;
+    font-size: 13px;
+    color: #CCCCCC;
+    border-top: solid 1pt rgb(241, 241, 241);
+    width: 100%;
+    padding: 0 5px 0 7px;
+   li {
+       padding-top: 10px;
+        margin-left: 0px;
+   }
+}
+
+.ts-footer-links:hover {
+    cursor: pointer;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from '../navbar/navbar_container';
 import { Link } from 'react-router-dom';
-import { FaUserFriends, FaStream } from 'react-icons/fa';
+import { FaUserFriends, FaStream, FaPlayCircle } from 'react-icons/fa';
 
 class Discover extends React.Component {
     constructor(props) {
@@ -27,8 +27,8 @@ class Discover extends React.Component {
     }
 
     render() {
+        const { tracks, currentUser, users, receiveSelectedTrack } = this.props
 
-        const { tracks, currentUser, users } = this.props
         let tracklist1 = [], t1t1, t1t2, t1t3, t1t4,
             tracklist2 = [], t2t1 ,t2t2, t2t3, t2t4,
             tracklist3 = [], t3t1, t3t2, t3t3, t3t4,
@@ -80,28 +80,54 @@ class Discover extends React.Component {
                     <br />
                     <ul className="playlist1-tracks">
                         <li>
-                            <img className="t-img" src={t1t1.photoUrl} alt="t1t1-img"/>
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t1t1)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70}/></a>
+                                    </div>
+                                    <img className="t-img" src={t1t1.photoUrl} alt="t1t1-img"/>
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t1t1.id}`} className="t-title">{t1t1.title}</Link><br />
-                            <Link to="" className="t-artist">{t1t1.artist}</Link>
-                            {/* was not reading the id, why???! {`/users/${t1t1.artist.id}`}  */}
-                            {/* <audio src={t1t1.songUrl} controls /> */}
+                            <Link to={`/users/${t1t1.artist.id}`} className="t-artist">{t1t1.artist}</Link>
                         </li>
                         <li>
-                            <img className="t-img" src={t1t2.photoUrl} alt="t1t2-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t1t2)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t1t2.photoUrl} alt="t1t2-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t1t2.id}`} className="t-title">{t1t2.title}</Link><br />
-                            <Link to="" className="t-artist">{t1t2.artist}</Link>
+                            <Link to={`/users/${t1t2.artist.id}`} className="t-artist">{t1t2.artist}</Link>
                             {/* <audio className="t-audio" src={t1t2.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t1t3.photoUrl} alt="t1t3-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t1t3)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t1t3.photoUrl} alt="t1t3-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t1t3.id}`} className="t-title">{t1t3.title}</Link><br />
-                            <Link to="" className="t-artist">{t1t3.artist}</Link>
+                            <Link to={`/users/${t1t3.artist.id}`} className="t-artist">{t1t3.artist}</Link>
                             {/* <audio src={t1t3.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t1t4.photoUrl} alt="t1-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t1t4)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t1t4.photoUrl} alt="t1-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t1t4.id}`} className="t-title">{t1t4.title}</Link><br />
-                            <Link to="" className="t-artist">{t1t4.artist}</Link>
+                            <Link to={`/users/${t1t4.artist.id}`} className="t-artist">{t1t4.artist}</Link>
                             {/* <audio src={t1t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -116,28 +142,56 @@ class Discover extends React.Component {
                     <br />
                     <ul className="playlist1-tracks">
                         <li>
-                            <img className="t-img" src={t2t1.photoUrl} alt="t2t1-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t2t1)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t2t1.photoUrl} alt="t2t1-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t2t1.id}`} className="t-title">{t2t1.title}</Link><br />
-                            <Link to="" className="t-artist">{t2t1.artist}</Link>
+                            <Link to={`/users/${t2t1.artist.id}`} className="t-artist">{t2t1.artist}</Link>
                             {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
                             {/* <audio src={t2t1.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t2t2.photoUrl} alt="t2t2-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t2t2)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t2t2.photoUrl} alt="t2t2-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t2t2.id}`} className="t-title">{t2t2.title}</Link><br />
-                            <Link to="" className="t-artist">{t2t2.artist}</Link>
+                            <Link to={`/users/${t2t2.artist.id}`} className="t-artist">{t2t2.artist}</Link>
                             {/* <audio className="t-audio" src={t2t2.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t2t3.photoUrl} alt="t2t3-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t2t3)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t2t3.photoUrl} alt="t2t3-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t2t3.id}`} className="t-title">{t2t3.title}</Link><br />
-                            <Link to="" className="t-artist">{t2t3.artist}</Link>
+                            <Link to={`/users/${t2t3.artist.id}`} className="t-artist">{t2t3.artist}</Link>
                             {/* <audio src={t2t3.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t2t4.photoUrl} alt="t2t4-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t2t4)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t2t4.photoUrl} alt="t2t4-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t2t4.id}`} className="t-title">{t2t4.title}</Link><br />
-                            <Link to="" className="t-artist">{t2t4.artist}</Link>
+                            <Link to={`/users/${t2t4.artist.id}`} className="t-artist">{t2t4.artist}</Link>
                             {/* <audio src={t2t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -152,28 +206,56 @@ class Discover extends React.Component {
                     <br />
                     <ul className="playlist1-tracks">
                         <li>
-                            <img className="t-img" src={t3t1.photoUrl} alt="t3t1-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t3t1)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t3t1.photoUrl} alt="t3t1-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t3t1.id}`} className="t-title">{t3t1.title}</Link><br />
-                            <Link to="" className="t-artist">{t3t1.artist}</Link>
+                            <Link to={`/users/${t3t1.artist.id}`} className="t-artist">{t3t1.artist}</Link>
                             {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
                             {/* <audio src={t3t1.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t3t2.photoUrl} alt="t3t2-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t3t2)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t3t2.photoUrl} alt="t3t2-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t3t2.id}`} className="t-title">{t3t2.title}</Link><br />
-                            <Link to="" className="t-artist">{t3t2.artist}</Link>
+                            <Link to={`/users/${t3t2.artist.id}`} className="t-artist">{t3t2.artist}</Link>
                             {/* <audio className="t-audio" src={t3t2.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t3t3.photoUrl} alt="t3t3-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t3t3)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t3t3.photoUrl} alt="t3t3-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t3t3.id}`} className="t-title">{t3t3.title}</Link><br />
-                            <Link to="" className="t-artist">{t3t3.artist}</Link>
+                            <Link to={`/users/${t3t3.artist.id}`} className="t-artist">{t3t3.artist}</Link>
                             {/* <audio src={t3t3.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t3t4.photoUrl} alt="t3t4-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t3t4)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t3t4.photoUrl} alt="t3t4-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t3t4.id}`} className="t-title">{t3t4.title}</Link><br />
-                            <Link to="" className="t-artist">{t3t4.artist}</Link>
+                            <Link to={`/users/${t3t4.artist.id}`} className="t-artist">{t3t4.artist}</Link>
                             {/* <audio src={t3t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -188,35 +270,67 @@ class Discover extends React.Component {
                     <br />
                     <ul className="playlist1-tracks">
                         <li>
-                            <img className="t-img" src={t4t1.photoUrl} alt="t4t1-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t4t1)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t4t1.photoUrl} alt="t4t1-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t4t1.id}`} className="t-title">{t4t1.title}</Link><br />
-                            {/* <Link to={`/users/${t4t1.artist.id}`} className="t-artist">{t4t1.artist}</Link> */}
+                            <Link to={`/users/${t4t1.artist.id}`} className="t-artist">{t4t1.artist}</Link>
                             {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
                             {/* <audio src={t4t1.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t4t2.photoUrl} alt="t4t2-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t4t2)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t4t2.photoUrl} alt="t4t2-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t4t2.id}`} className="t-title">{t4t2.title}</Link><br />
-                            <Link to="" className="t-artist">{t4t2.artist}</Link>
+                            <Link to={`/users/${t4t2.artist.id}`} className="t-artist">{t4t2.artist}</Link>
                             {/* <audio className="t-audio" src={t4t2.songUrl} controls /> */}
                         </li>
                         <li>
-                            <img className="t-img" src={t4t3.photoUrl} alt="t4t3-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t4t3)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t4t3.photoUrl} alt="t4t3-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t4t3.id}`} className="t-title">{t4t3.title}</Link><br />
-                            <Link to="" className="t-artist">{t4t3.artist}</Link>
-                            {/* <audio src={t4t3.songUrl} controls /> */}
+                            <Link to={`/users/${t4t3.artist.id}`} className="t-artist">{t4t3.artist}</Link>
                         </li>
                         <li>
-                            <img className="t-img" src={t4t4.photoUrl} alt="t4t4-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t4t4)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t4t4.photoUrl} alt="t4t4-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t4t4.id}`} className="t-title">{t4t4.title}</Link><br />
-                            <Link to="" className="t-artist">{t4t4.artist}</Link>
-                            {/* <audio src={t4t4.songUrl} controls /> */}
+                            <Link to={`/users/${t4t4.artist.id}`} className="t-artist">{t4t4.artist}</Link>
                         </li>
                         <li>
-                            <img className="t-img" src={t4t5.photoUrl} alt="t4t5-img" />
+                            <div className="track-play-button-container">
+                                <button className="track-play-button" onClick={() => receiveSelectedTrack(t4t5)}>
+                                    <div className="play-circle-container-track">
+                                        <a><FaPlayCircle size={70} /></a>
+                                    </div>
+                                    <img className="t-img" src={t4t5.photoUrl} alt="t4t5-img" />
+                                </button>
+                            </div>
                             <Link to={`/tracks/${t4t5.id}`} className="t-title">{t4t5.title}</Link><br />
-                            <Link to="" className="t-artist">{t4t5.artist}</Link>
-                            {/* <audio src={t4t5.songUrl} controls /> */}
+                            <Link to={`/users/${t4t5.artist.id}`} className="t-artist">{t4t5.artist}</Link>
                         </li>
                     </ul>
                 </div>
