@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     IoMdSkipBackward, IoMdPlay, IoMdPause, IoMdSkipForward, 
     IoMdVolumeHigh, IoMdVolumeLow, IoMdVolumeOff, IoMdHeart, IoMdMenu } from 'react-icons/io';
@@ -25,9 +26,10 @@ class Playbar extends React.Component {
         this.handleNextSong = this.handleNextSong.bind(this);
     }
     
-    componentWillUnmount() {
-        clearInterval(this.timeInterval);
-    }
+    // componentWillUnmount() {
+    //     clearInterval(this.timeInterval);
+    // }
+
     
     componentDidUpdate(prevProps) {
         if (prevProps.songPlaying !== this.props.songPlaying) {
@@ -38,11 +40,12 @@ class Playbar extends React.Component {
     }
 
     handleVolume(e) {
+        e.stopPropagation();
         const audioTag = this.audioTag.current;
         const updatedVolume = e.target.value;
         audioTag.muted = false;
         audioTag.volume = updatedVolume;
-        this.setState({ currentVolume: updatedVolume, muted: false, volumeBar: false})
+        this.setState({ currentVolume: updatedVolume, muted: false})
     }
 
     volumeBar() {
@@ -186,7 +189,7 @@ class Playbar extends React.Component {
                     <div className="progress-bar-container">
                         <div className="progress-bar">
                             <a className="start-time">{this.formatElapsedTime(this.state.currentTime)}</a>
-                            <input type="range" className="progress-bar-input" onChange={this.playbarTime} min="0" max={duration} step="1" />
+                            <input type="range" className="progress-bar-input" onChange={this.playbarTime} min="0" max={this.state.songLength} step="1" />
                             <a className="end-time">{this.formatElapsedTime(this.state.songLength)}</a> 
                             <div className="outer-music-bar">
                                 <div className="inner-music-bar" style={{ width: `${100 * (this.state.currentTime / this.state.songLength) || 1}%` }}></div>
@@ -196,12 +199,12 @@ class Playbar extends React.Component {
                     </div>
 
                     <div className="playbar-right-buttons">
-                        <div className="volume-container">
-                            <div className="volume-button">
-                                <button onMouseOver={this.volumeBar} onMouseOut={this.volumeBar} onClick={this.volumeMute}>{volumeButton}</button>
-                                <div className={`volumebar-container-${this.state.volumeBar ? "revealed" : "hidden"}`}>
-                                    <input type="range" step="any" min="0.0" max="1.0" 
-                                        value={this.state.muted ? 0 : this.state.currentVolume} onChange={this.handleVolume} />
+                        <div className="volume-container" onMouseOver={this.volumeBar} onMouseOut={this.volumeBar}>
+                            <button className="volume-button" onClick={this.volumeMute}>{volumeButton}</button>
+                            <div className={`volumebar-container-${this.state.volumeBar ? "revealed" : "hidden"}`}>
+                                <div className="volumebar-outmost">
+                                    <input type="range" className="volume-input" step="any" min="0.0" max="1.0" 
+                                        value={this.state.muted ? 0 : this.state.currentVolume} onChange={this.handleVolume}/>
                                 </div>
                             </div>
                         </div>    
@@ -209,8 +212,8 @@ class Playbar extends React.Component {
                     <div className="track-info-container">
                         <img className="playbar-track-pic" src={trackImg} alt="playbar-track-pic" />
                         <div className="playbar-track-info">    
-                            <h2>{trackArtist}</h2>
-                            <h1>{trackTitle}</h1>
+                            <Link to={`/users/${selectedTrack.artist_id}`}><h2>{trackArtist}</h2></Link>
+                            <Link to={`/tracks/${selectedTrack.id}`}><h1>{trackTitle}</h1></Link>
                         </div>
                     </div>
                     <button className="heart-button">< IoMdHeart /></button>

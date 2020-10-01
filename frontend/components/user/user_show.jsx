@@ -19,31 +19,7 @@ class UserShow extends React.Component {
 
         let song;
 
-        // let name, artist, img, trackImg;
-        // if (user) {
-        //     artist = user;
-        //     img = artist.photoUrl;
-        //     if (user.tracks_ids) {
-        //     trackImg = (this.props.tracks.first).photoUrl
-        //     }
-        //     if (user.username) {
-        //         name = user.username;
-        //     } else {
-        //         name = user.email;
-        //     }
-        // } else {
-        //     artist, img, trackImg = null;
-        // }
-
-        // if (Object.values(tracks).indexOf(user.id) > -1) {
-        //     console.log('has test1');
-        // }
-
-        if (tracks) {
-            song = tracks.filter(track => track.artist_id === user.id);
-        } else {
-            song = null;
-        }
+        
 
         if (!user) return null;
         if (!tracks) return null;
@@ -75,8 +51,11 @@ class UserShow extends React.Component {
                         <div className="bottom-us-container">
                             <div className="us-tracks">
                                 <h1>Spotlight</h1>
-                                <img className="track-us-img" src={song.photoUrl} alt="track-img-us" />
-                                {song.title}
+                                <div className="gif-cs-container">
+                                    {/* <img className="coming-soon-gif" src="https://i.gifer.com/P4id.gif" alt=""/> */}
+                                </div>
+                                {/* <img className="track-us-img" src={trackImg} alt="track-img-us" />
+                                {title} */}
                             </div>
                             <div className="us-insights">
                                 <div className="following-info-container">

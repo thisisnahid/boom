@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../navbar/navbar_container';
 import { FaPlayCircle, FaPauseCircle, FaHeart, FaRedo, FaShareSquare, FaPlus, FaUserFriends, FaStream } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 class TrackShow extends React.Component {
     constructor(props) {
@@ -35,10 +36,10 @@ class TrackShow extends React.Component {
                     <div className="main-ts-bottom">
                         <div className="left-artist-bar-container">
                             <div className="artist-img-container">
-                                <img className="artist-profile-img" src={trackArtist.photoUrl} alt={trackArtist.username} />
+                            <Link to={`/users/${track.artist_id}`}><img className="artist-profile-img" src={trackArtist.photoUrl} alt={trackArtist.username} /></Link>
                             </div>
                             <div className="artist-username-container">
-                                <h1>{trackArtist.username}</h1>
+                                <Link to={`/users/${track.artist_id}`}><h1>{trackArtist.username}</h1></Link>
                                 <div className="sb-follow-icons">
                                     <a ><FaUserFriends />28,753</a>
                                     <div className="sb-stream-img"><FaStream /></div>8
@@ -52,7 +53,6 @@ class TrackShow extends React.Component {
                                     You can follow now on Instagram, Twitter, YouTube, {`&`} Boom
                                 </h2>
                             </div>
-                            
                         </div>
                     </div>
                 )

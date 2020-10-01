@@ -1,0 +1,124 @@
+.track-upload-container {
+    background-color: rgb(241, 241, 241);
+    height: 100%;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.track-upload-subcontainer {
+    background-color: rgb(27, 26, 26);
+    width: 70%;
+    align-items: center;
+    margin: 0 50px 0 50px;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.track-upload-form-container {
+    margin-top: 150px;
+    height: 400px;
+    width: 750px;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(56, 54, 54);
+    .drag-h1 {
+        font-size: 24px;
+    }
+    .choose-files-button {
+        background-color: #FF5500;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        padding: 11px 53px 11px 53px; 
+        font-size: 15px;
+        margin-top: 23px;
+    }
+    .choose-files-button:hover {
+        cursor: not-allowed;
+    }
+    .playlist-check-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 11px;
+        padding: 10px 0 10px 0;
+    }
+    #playlist-tu {
+        margin-right: 5px;
+    }
+    .radio-priv-pub {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .priv-buttons {
+        font-size: 12px;
+        margin-right: 6px;
+        margin-bottom: 10px;
+    }
+    .file-type-text-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        padding-top: 20px;
+        .file-type-text {
+            padding-right: 5px;
+        }
+        a {
+            color: blue;
+        }
+    }
+}
+
+.under-upload-form-container {
+    margin-top: 10px;
+    height: 170px;
+    width: 750px;
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(56, 54, 54);
+    .terms-text {
+        font-size: 13px;
+        justify-self: flex-end;
+    }
+    .tu-footer-container {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+        .tu-footer-links {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 0px 20px 0px;
+            margin: 0 40px 0 40px;
+            font-size: 13px;
+            color: rgb(218, 218, 218);
+            border-top: solid 1pt rgb(218, 217, 217);
+            align-items: center;
+            justify-content: center;
+            li {
+                margin-left: 5px;
+            }
+        }
+        
+        .tu-footer-links:hover {
+            cursor: pointer;
+        }
+    }
+}

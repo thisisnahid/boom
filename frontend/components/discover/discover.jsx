@@ -34,7 +34,8 @@ class Discover extends React.Component {
             tracklist3 = [], t3t1, t3t2, t3t3, t3t4,
             tracklist4 = [], t4t1, t4t2, t4t3, t4t4, t4t5,
             playlist1, playlist2, playlist3, playlist4,
-            rightSidebar, usersArr, a1, a2, a3, a1i, a2i, a3i;
+            rightSidebar, usersArr, a1, a2, a3, a1i, a2i, a3i,
+            a1Id, a2Id, a3Id;
     
         let tracksArray;
         if (tracks) {
@@ -101,7 +102,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t1t2.id}`} className="t-title">{t1t2.title}</Link><br />
-                            <Link to={`/users/${t1t2.artist.id}`} className="t-artist">{t1t2.artist}</Link>
+                            <Link to={`/users/${t1t2.artist_id}`} className="t-artist">{t1t2.artist}</Link>
                             {/* <audio className="t-audio" src={t1t2.songUrl} controls /> */}
                         </li>
                         <li>
@@ -114,7 +115,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t1t3.id}`} className="t-title">{t1t3.title}</Link><br />
-                            <Link to={`/users/${t1t3.artist.id}`} className="t-artist">{t1t3.artist}</Link>
+                            <Link to={`/users/${t1t3.artist_id}`} className="t-artist">{t1t3.artist}</Link>
                             {/* <audio src={t1t3.songUrl} controls /> */}
                         </li>
                         <li>
@@ -127,7 +128,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t1t4.id}`} className="t-title">{t1t4.title}</Link><br />
-                            <Link to={`/users/${t1t4.artist.id}`} className="t-artist">{t1t4.artist}</Link>
+                            <Link to={`/users/${t1t4.artist_id}`} className="t-artist">{t1t4.artist}</Link>
                             {/* <audio src={t1t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -151,8 +152,8 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t2t1.id}`} className="t-title">{t2t1.title}</Link><br />
-                            <Link to={`/users/${t2t1.artist.id}`} className="t-artist">{t2t1.artist}</Link>
-                            {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
+                            <Link to={`/users/${t2t1.artist_id}`} className="t-artist">{t2t1.artist}</Link>
+                            {/* was not reading the id, why???! {`/users/${t2t1.artist_id}`}  */}
                             {/* <audio src={t2t1.songUrl} controls /> */}
                         </li>
                         <li>
@@ -165,7 +166,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t2t2.id}`} className="t-title">{t2t2.title}</Link><br />
-                            <Link to={`/users/${t2t2.artist.id}`} className="t-artist">{t2t2.artist}</Link>
+                            <Link to={`/users/${t2t2.artist_id}`} className="t-artist">{t2t2.artist}</Link>
                             {/* <audio className="t-audio" src={t2t2.songUrl} controls /> */}
                         </li>
                         <li>
@@ -178,7 +179,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t2t3.id}`} className="t-title">{t2t3.title}</Link><br />
-                            <Link to={`/users/${t2t3.artist.id}`} className="t-artist">{t2t3.artist}</Link>
+                            <Link to={`/users/${t2t3.artist_id}`} className="t-artist">{t2t3.artist}</Link>
                             {/* <audio src={t2t3.songUrl} controls /> */}
                         </li>
                         <li>
@@ -191,7 +192,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t2t4.id}`} className="t-title">{t2t4.title}</Link><br />
-                            <Link to={`/users/${t2t4.artist.id}`} className="t-artist">{t2t4.artist}</Link>
+                            <Link to={`/users/${t2t4.artist_id}`} className="t-artist">{t2t4.artist}</Link>
                             {/* <audio src={t2t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -215,8 +216,8 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t3t1.id}`} className="t-title">{t3t1.title}</Link><br />
-                            <Link to={`/users/${t3t1.artist.id}`} className="t-artist">{t3t1.artist}</Link>
-                            {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
+                            <Link to={`/users/${t3t1.artist_id}`} className="t-artist">{t3t1.artist}</Link>
+                            {/* was not reading the id, why???! {`/users/${t2t1.artist_id}`}  */}
                             {/* <audio src={t3t1.songUrl} controls /> */}
                         </li>
                         <li>
@@ -229,7 +230,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t3t2.id}`} className="t-title">{t3t2.title}</Link><br />
-                            <Link to={`/users/${t3t2.artist.id}`} className="t-artist">{t3t2.artist}</Link>
+                            <Link to={`/users/${t3t2.artist_id}`} className="t-artist">{t3t2.artist}</Link>
                             {/* <audio className="t-audio" src={t3t2.songUrl} controls /> */}
                         </li>
                         <li>
@@ -242,7 +243,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t3t3.id}`} className="t-title">{t3t3.title}</Link><br />
-                            <Link to={`/users/${t3t3.artist.id}`} className="t-artist">{t3t3.artist}</Link>
+                            <Link to={`/users/${t3t3.artist_id}`} className="t-artist">{t3t3.artist}</Link>
                             {/* <audio src={t3t3.songUrl} controls /> */}
                         </li>
                         <li>
@@ -255,7 +256,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t3t4.id}`} className="t-title">{t3t4.title}</Link><br />
-                            <Link to={`/users/${t3t4.artist.id}`} className="t-artist">{t3t4.artist}</Link>
+                            <Link to={`/users/${t3t4.artist_id}`} className="t-artist">{t3t4.artist}</Link>
                             {/* <audio src={t3t4.songUrl} controls /> */}
                         </li>
                     </ul>
@@ -279,8 +280,8 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t4t1.id}`} className="t-title">{t4t1.title}</Link><br />
-                            <Link to={`/users/${t4t1.artist.id}`} className="t-artist">{t4t1.artist}</Link>
-                            {/* was not reading the id, why???! {`/users/${t2t1.artist.id}`}  */}
+                            <Link to={`/users/${t4t1.artist_id}`} className="t-artist">{t4t1.artist}</Link>
+                            {/* was not reading the id, why???! {`/users/${t2t1.artist_id}`}  */}
                             {/* <audio src={t4t1.songUrl} controls /> */}
                         </li>
                         <li>
@@ -293,7 +294,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t4t2.id}`} className="t-title">{t4t2.title}</Link><br />
-                            <Link to={`/users/${t4t2.artist.id}`} className="t-artist">{t4t2.artist}</Link>
+                            <Link to={`/users/${t4t2.artist_id}`} className="t-artist">{t4t2.artist}</Link>
                             {/* <audio className="t-audio" src={t4t2.songUrl} controls /> */}
                         </li>
                         <li>
@@ -306,7 +307,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t4t3.id}`} className="t-title">{t4t3.title}</Link><br />
-                            <Link to={`/users/${t4t3.artist.id}`} className="t-artist">{t4t3.artist}</Link>
+                            <Link to={`/users/${t4t3.artist_id}`} className="t-artist">{t4t3.artist}</Link>
                         </li>
                         <li>
                             <div className="track-play-button-container">
@@ -318,7 +319,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t4t4.id}`} className="t-title">{t4t4.title}</Link><br />
-                            <Link to={`/users/${t4t4.artist.id}`} className="t-artist">{t4t4.artist}</Link>
+                            <Link to={`/users/${t4t4.artist_id}`} className="t-artist">{t4t4.artist}</Link>
                         </li>
                         <li>
                             <div className="track-play-button-container">
@@ -330,7 +331,7 @@ class Discover extends React.Component {
                                 </button>
                             </div>
                             <Link to={`/tracks/${t4t5.id}`} className="t-title">{t4t5.title}</Link><br />
-                            <Link to={`/users/${t4t5.artist.id}`} className="t-artist">{t4t5.artist}</Link>
+                            <Link to={`/users/${t4t5.artist_id}`} className="t-artist">{t4t5.artist}</Link>
                         </li>
                     </ul>
                 </div>
@@ -352,9 +353,9 @@ class Discover extends React.Component {
 
             if (users.length > 1) {
                 usersArr = users;
-                a1 = usersArr[1].username; a1i = usersArr[1].photoUrl;
-                a2 = usersArr[5].username; a2i = usersArr[5].photoUrl;
-                a3 = usersArr[9].username; a3i = usersArr[9].photoUrl;
+                a1 = usersArr[1].username; a1i = usersArr[1].photoUrl; a1Id = usersArr[1].id;
+                a2 = usersArr[5].username; a2i = usersArr[5].photoUrl; a2Id = usersArr[5].id;
+                a3 = usersArr[9].username; a3i = usersArr[9].photoUrl; a3Id = usersArr[9].id;
             } else {
                 usersArr, a1, a2, a3 = [];
             }
@@ -373,9 +374,9 @@ class Discover extends React.Component {
                         <ul className="follow-ul">
                             <h1 className="who-to-follow"><a className="follow-i-sb"><FaUserFriends /></a>Who to follow</h1>
                             <li className="who-to-follow-a">
-                                <Link to="" ><img className="artist-img" src={a3i} alt={a3} /></Link>
+                                <Link to={`users/${a3Id}`} ><img className="artist-img" src={a3i} alt={a3} /></Link>
                                 <div className="right-img-txt">
-                                    <Link to="" ><h1 className="a-name">{a3}</h1></Link>
+                                    <Link to={`users/${a3Id}`} ><h1 className="a-name">{a3}</h1></Link>
                                     <div className="sb-follow-icons">
                                         <a ><FaUserFriends />5,683</a>
                                         <div className="sb-stream-img"><FaStream /></div>19
@@ -383,9 +384,9 @@ class Discover extends React.Component {
                                 </div>
                             </li>
                             <li className="who-to-follow-a"> 
-                                <Link to="" ><img className="artist-img" src={a2i} alt={a2} /></Link>
+                                <Link to={`users/${a2Id}`} ><img className="artist-img" src={a2i} alt={a2} /></Link>
                                 <div className="right-img-txt">
-                                    <Link to="" ><h1 className="a-name">{a2}</h1></Link>
+                                    <Link to={`users/${a2Id}`} ><h1 className="a-name">{a2}</h1></Link>
                                     <div className="sb-follow-icons">
                                         <a ><FaUserFriends />28,753</a>
                                         <div className="sb-stream-img"><FaStream /></div>8
@@ -393,9 +394,9 @@ class Discover extends React.Component {
                                 </div>
                             </li>
                             <li className="who-to-follow-a">
-                                <Link to="" ><img className="artist-img" src={a1i} alt={a1} /></Link>
+                                <Link to={`users/${a1Id}`} ><img className="artist-img" src={a1i} alt={a1} /></Link>
                                 <div className="right-img-txt">
-                                    <Link to="" ><h1 className="a-name">{a1}</h1></Link >
+                                    <Link to={`users/${a1Id}`} ><h1 className="a-name">{a1}</h1></Link >
                                     <div className="sb-follow-icons">
                                         <a ><FaUserFriends />11,861</a>
                                         <div className="sb-stream-img"><FaStream /></div>21

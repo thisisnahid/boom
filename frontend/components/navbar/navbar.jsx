@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FaEnvelope, FaBell } from 'react-icons/fa';
+import { FaEnvelope, FaBell, FaAngleDown } from 'react-icons/fa';
 
 
 const NavBar = (props) => {
@@ -29,8 +29,10 @@ const NavBar = (props) => {
                                 <li><input className="nav-search" type="text" placeholder="Search"/></li>
                                 <div className="nav-right">
                                     <li><a className="nav-links">Try Pro</a></li>
-                                    <li><a className="nav-links">Upload</a></li >
-                                    {/* <li><a className="fas fa-bell"><img src="https://fontawesome.com/icons/bell?style=solid" alt=""/></a></li> */}
+                                    <li><Link to="/track/upload" className="nav-links">Upload</Link></li >
+                                    <li><Link to={`/users/${props.currentUser.id}`}><img className="profile-nav-img" src={props.currentUser.photoUrl} alt="profile-pic" /></Link></li>
+                                    <li className="nav-links"><Link to={`/users/${props.currentUser.id}`} className="nav-links">{props.currentUser.username}</Link></li>
+                                    <li><FaAngleDown /></li>
                                     <li className="bell-icon"><FaBell /> </li>
                                     <li className="envelope-icon"><FaEnvelope /></li>
                                     <li><a className="nav-links" onClick={() => handleLogout()}>Log Out</a></li>
