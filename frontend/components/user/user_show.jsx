@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../navbar/navbar_container';
-import { FaEnvelopeOpenText } from 'react-icons/io';
+import { FaUserFriends, FaStream, FaPlayCircle, FaShareSquare } from 'react-icons/fa';
 import Playbar from '../playbar/playbar_container';
 
 class UserShow extends React.Component {
@@ -35,9 +35,9 @@ class UserShow extends React.Component {
         //     artist, img, trackImg = null;
         // }
 
-        if (Object.values(tracks).indexOf(user.id) > -1) {
-            console.log('has test1');
-        }
+        // if (Object.values(tracks).indexOf(user.id) > -1) {
+        //     console.log('has test1');
+        // }
 
         if (tracks) {
             song = tracks.filter(track => track.artist_id === user.id);
@@ -49,50 +49,62 @@ class UserShow extends React.Component {
         if (!tracks) return null;
         
         return(
-            <div className="user-show-container">
+            <div> 
                 <NavBar className="nav-bar-user-show" />
-                <div className="user-show-subcontainer">
-                    <header className="user-header-container">
-                        <img className="profile-pic" src={user.photoUrl} alt="profile-pic"/>
-                        <p className="user-name">{user.username}</p>
-                    </header>
-                    <div className="tabs-line-container">
-                        <ul className="left-tabs">
-                            <li>All</li>
-                            <li>Popular tracks</li>
-                            <li>Tracks</li>
-                            <li>Albums</li>
-                            <li>Playlists</li>
-                            <li>Reposts</li>
-                        </ul>
-                        <ul className="right-buttons">
-                            <li><button className="station-button-us">Station</button></li>
-                            <li><button className="follow-button-us">Follow</button></li>
-                            <li><button className="shar-button-us">Share</button></li>
-                        </ul>
-                    </div>
-                    <div className="bottom-us-container">
-                        <div className="us-tracks">
-                            <h1>Spotlight</h1>
-                            <img className="track-us-img" src={song.photoUrl} alt="track-img-us" />
-                            {song.title}
+                <div className="user-show-container">
+                    <div className="user-show-subcontainer">
+                        <header className="user-header-container">
+                            <img className="profile-pic" src={user.photoUrl} alt="profile-pic"/>
+                            <p className="user-name">{user.username}</p>
+                        </header>
+                        <div className="tabs-line-container">
+                            <ul className="left-tabs">
+                                <li>All</li>
+                                <li>Popular tracks</li>
+                                <li>Tracks</li>
+                                <li>Albums</li>
+                                <li>Playlists</li>
+                                <li>Reposts</li>
+                            </ul>
+                            <ul className="right-buttons">
+                                <li><button className="station-button-us"><FaStream />Station</button></li>
+                                <li className="orange-follow"><button className="follow-button-us"><FaUserFriends />Follow</button></li>
+                                <li><button className="shar-button-us"><FaShareSquare />Share</button></li>
+                            </ul>
                         </div>
-                        <div className="us-insights">
-                            <div className="following-info-container">
-                                <ul className="following-buttons">
-                                    <li><button>1.06M</button></li>
-                                    <li><button></button></li>
-                                    <li><button></button></li>
-                                </ul>
+                        <div className="bottom-us-container">
+                            <div className="us-tracks">
+                                <h1>Spotlight</h1>
+                                <img className="track-us-img" src={song.photoUrl} alt="track-img-us" />
+                                {song.title}
                             </div>
-                            <div>
-                                <h1>Empowering a creative and passionate community through innovation. Welcome to the Family!</h1>
+                            <div className="us-insights">
+                                <div className="following-info-container">
+                                    <ul className="following-buttons">
+                                        <li><h1 className="following-b-text">Followers</h1><button>432M</button></li>
+                                        <li id="following-b-mid"><h1 className="following-b-text">Following</h1><button>1</button></li>
+                                        <li><h1 className="following-b-text">Tracks</h1><button>48</button></li>
+                                    </ul>
+                                </div>
+                                <div className="empowering-text">
+                                    <h1>Empowering a creative and passionate community through innovation. Welcome to the Family!</h1>
+                                </div>
+                                <div className="ad-container">
+                                    <img className="gif-ad" src="https://media.giphy.com/media/NU8tcjnPaODTy/giphy.gif" alt="" />
+                                </div>
+                                <div className="ts-footer-container">
+                                    <ul className="ts-footer-links">
+                                        <li><a href="https://github.com/thisisnahid/boom/">Github - </a></li>
+                                        <li><a href="https://www.linkedin.com/in/nahid-siddiqui-73179ba9/"> LinkedIn - </a></li>
+                                        <li><a href="https://groomarts.com/assets/images/_listItem/cute-puppy-1.jpg"> Puppy</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 };

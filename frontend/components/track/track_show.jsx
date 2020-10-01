@@ -128,13 +128,13 @@ class TrackShow extends React.Component {
                                         Waddle to new music NOW on Boom
                                     </h2>
                                 </div>
-                                    <div className="ts-footer-container">
-                                        <ul className="ts-footer-links">
-                                            <li><a href="https://github.com/thisisnahid/boom/">Github - </a></li>
-                                            <li><a href="https://www.linkedin.com/in/nahid-siddiqui-73179ba9/"> LinkedIn - </a></li>
-                                            <li><a href="https://groomarts.com/assets/images/_listItem/cute-puppy-1.jpg"> Puppy</a></li>
-                                        </ul>
-                                    </div>
+                                <div className="ts-footer-container">
+                                    <ul className="ts-footer-links">
+                                        <li><a href="https://github.com/thisisnahid/boom/">Github - </a></li>
+                                        <li><a href="https://www.linkedin.com/in/nahid-siddiqui-73179ba9/"> LinkedIn - </a></li>
+                                        <li><a href="https://groomarts.com/assets/images/_listItem/cute-puppy-1.jpg"> Puppy</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
