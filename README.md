@@ -10,12 +10,12 @@ Boom is a free music platform that allows artists to upload and share their musi
 * A demo user is available to simulate the user experience
 ### Custom Music Player
 * Customized music player with features that include:
-      * play & pause 
-      * previous track & next track
-      * live current song time updates
-      * scrubbing on progress bar
-      * volume button with toggle mute
-      * live links to artist and track page
+..* play & pause 
+..* previous track & next track
+..* live current song time updates
+..* scrubbing on progress bar
+..* volume button with toggle mute
+..* live links to artist and track page
 ### Continuos Play and Audio Streaming
 * music does not stop playing while navigating through different pages on the app
 ### User Profile
