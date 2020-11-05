@@ -4,6 +4,10 @@
     <title>Boom</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta property="og:title" content="Boom" />
+    <meta property='og:image' content="<%= image_url('../../assets/images/Boom.gif') %>"/>
+    <meta property="og:description" content="An interactive music streaming platform for artists and listeners." />
+    <meta property="og:url" content="https://boom-music.herokuapp.com/#/"/>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchUser, fetchUsers } from '../../actions/user_actions';
 import { fetchAllTracks } from '../../actions/track_actions';
+import { createFollow, deleteFollow } from '../../actions/follow_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -12,7 +13,9 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch) => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
     fetchUsers: () => dispatch(fetchUsers()),
-    fetchAllTracks: () => dispatch(fetchAllTracks())
+    fetchAllTracks: () => dispatch(fetchAllTracks()),
+    createFollow: userId => dispatch(createFollow(userId)),
+    deleteFollow: userId => dispatch(deleteFollow(userId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserShow);

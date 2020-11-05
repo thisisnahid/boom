@@ -6,23 +6,57 @@ import Playbar from '../playbar/playbar_container';
 class UserShow extends React.Component {
     constructor(props) {
         super(props);
+        this.handleFollow = this.handleFollow.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId);
-        this.props.fetchUsers();
+        // this.props.fetchUsers();
         this.props.fetchAllTracks();
     }
 
+    handleFollow(userId) {
+        const { user, currentUser, createFollow, deleteFollow } = this.props;
+        if (currentUser.artists_following_ids.includes(userId)) {
+            deleteFollow(userId);
+        } else {
+            createFollow(userId);
+        }
+    }
+
     render() {
-        const { user, tracks } = this.props;
-
-        let song;
-
-        
+        const { currentUser, user, tracks } = this.props;
 
         if (!user) return null;
         if (!tracks) return null;
+        let followers, following, toggleFollow;
+        if (user) {
+            followers = user.follower_ids.length;
+            following = user.artists_following_ids.length;
+        }
+        if (currentUser.artists_following_ids.length) {
+            if (currentUser.artists_following_ids.includes(user.id)) {
+                toggleFollow = (
+                    <div className="toggle-follow-button">
+                        <li className="orange-follow">
+                            <button className="follow-button-us" onClick={() => this.handleFollow(user.id)}>
+                                <FaUserFriends />Unfollow
+                            </button>
+                        </li>
+                    </div>
+                )
+            } else {
+                toggleFollow = (
+                    <div className="toggle-follow-button">
+                        <li className="orange-follow">
+                            <button className="follow-button-us" onClick={() => this.handleFollow(user.id)}>
+                                <FaUserFriends />Follow
+                            </button>
+                        </li>
+                    </div>
+                )
+            }
+        }
         
         return(
             <div> 
@@ -44,7 +78,7 @@ class UserShow extends React.Component {
                             </ul>
                             <ul className="right-buttons">
                                 <li><button className="station-button-us"><FaStream />Station</button></li>
-                                <li className="orange-follow"><button className="follow-button-us"><FaUserFriends />Follow</button></li>
+                                {toggleFollow}
                                 <li><button className="shar-button-us"><FaShareSquare />Share</button></li>
                             </ul>
                         </div>
@@ -60,8 +94,8 @@ class UserShow extends React.Component {
                             <div className="us-insights">
                                 <div className="following-info-container">
                                     <ul className="following-buttons">
-                                        <li><h1 className="following-b-text">Followers</h1><button>432M</button></li>
-                                        <li id="following-b-mid"><h1 className="following-b-text">Following</h1><button>1</button></li>
+                                        <li><h1 className="following-b-text">Followers</h1><button>{followers}</button></li>
+                                        <li id="following-b-mid"><h1 className="following-b-text">Following</h1><button>{following}</button></li>
                                         <li><h1 className="following-b-text">Tracks</h1><button>48</button></li>
                                     </ul>
                                 </div>

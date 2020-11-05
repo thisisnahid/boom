@@ -3,13 +3,13 @@ class Api::FollowsController < ApplicationController
 
     def create
         @user = current_user
-        @follow = @user.outgoing_follows.create(artist_id: params[:user_id])
+        @follow = @user.outgoing_follows.create!(artist_id: params[:artist_id])
         render 'api/users/show'
     end
 
     def destroy
         @user = current_user
-        @follow = @user.outgoing_follows.find_by(artist_id: params[:user_id])
+        @follow = @user.outgoing_follows.find_by(artist_id: params[:artist_id])
         if @follow
             @follow.destroy!
             render 'api/users/show'
@@ -17,5 +17,4 @@ class Api::FollowsController < ApplicationController
             render json: ["Unfollow error"], status: 422
         end
     end
-
 end

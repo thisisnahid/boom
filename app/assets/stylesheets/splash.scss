@@ -216,6 +216,10 @@
     color: #999;
 }
 
+.e-title:hover, .e-artist:hover {
+    cursor: default;
+}
+
 .explore-trending-button {
     background-color: #FF5500;
     color: white;
@@ -380,6 +384,12 @@
 
 .footer-links:hover {
     cursor: pointer;
+}
+
+.start-uploading-button:hover,
+.explore-trending-button:hover,
+ {
+    cursor: default;
 }
 
 

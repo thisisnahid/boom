@@ -1,0 +1,1 @@
+json.extract! follows, :id, :artist, :follower, :artist_id, :follower_id

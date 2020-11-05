@@ -124,9 +124,10 @@
 .signup-inputs, .login-inputs {
   border-radius: 3px;
   border: #ccc 1pt solid;
-  color: #ccc;
+  color: #1b1b1b;
   text-align: left;
-  width: 108%;
+  width: 100%;
+  padding: 0 13px 0 13px;
   margin-top: 2px;
   // margin-bottom: 2px;
   display: flex;
